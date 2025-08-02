@@ -58,6 +58,36 @@
   }
 }
 
+@layer utilities {
+  .text-secondary {
+    @apply text-gray-700;
+  }
+  
+  .dark .text-secondary {
+    @apply text-gray-300;
+  }
+  
+  .dark .text-dark-text {
+    @apply text-gray-100;
+  }
+  
+  .bg-dark-bg {
+    @apply bg-gray-900;
+  }
+  
+  .bg-secondary-dark {
+    @apply bg-gray-800;
+  }
+  
+  .bg-dark-card {
+    @apply bg-gray-800;
+  }
+  
+  .bg-secondary-light {
+    @apply bg-gray-700;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

@@ -60,8 +60,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <a href="mailto:contact@example.com" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                    contact@example.com
+                  <a href="mailto:hoangtruongminh22@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                    hoangtruongminh22@gmail.com
                   </a>
                 </div>
               </div>
@@ -72,8 +72,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <a href="tel:+84123456789" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
-                    +84 123 456 789
+                  <a href="tel:+84986122511" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
+                    +84 986 122 511
                   </a>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold">Location</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Ho Chi Minh City, Vietnam
+                    Dong Da, Ha Noi, Vietnam
                   </p>
                 </div>
               </div>
@@ -146,64 +146,64 @@ const Contact = () => {
                   <label htmlFor="name" className="block mb-2 font-medium">
                     Your Name
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                    placeholder="John Doe"
-                  />
+                                     <input
+                     type="text"
+                     id="name"
+                     name="name"
+                     value={formData.name}
+                     onChange={handleChange}
+                     required
+                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
+                     placeholder="Truong Minh Hoang"
+                   />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block mb-2 font-medium">
                     Your Email
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                    placeholder="john@example.com"
-                  />
+                                     <input
+                     type="email"
+                     id="email"
+                     name="email"
+                     value={formData.email}
+                     onChange={handleChange}
+                     required
+                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
+                     placeholder="hoangtruongminh22@gmail.com"
+                   />
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block mb-2 font-medium">
                     Subject
                   </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                    placeholder="Project Inquiry"
-                  />
+                                     <input
+                     type="text"
+                     id="subject"
+                     name="subject"
+                     value={formData.subject}
+                     onChange={handleChange}
+                     required
+                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
+                     placeholder="Web Development Project"
+                   />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block mb-2 font-medium">
                     Your Message
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white resize-none"
-                    placeholder="Hello, I'd like to talk about..."
-                  ></textarea>
+                                     <textarea
+                     id="message"
+                     name="message"
+                     value={formData.message}
+                     onChange={handleChange}
+                     required
+                     rows={5}
+                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white resize-none"
+                     placeholder="Hello Truong Minh Hoang, I'd like to discuss a web development project..."
+                   ></textarea>
                 </div>
                 
                 <button

@@ -1,4 +1,15 @@
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+
+interface Skill {
+  name: string
+  level: number
+  icon: string
+}
+
+interface SkillsData {
+  [key: string]: Skill[]
+}
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState('frontend')
@@ -9,7 +20,7 @@ const Skills = () => {
     { id: 'tools', label: 'Tools & Others' },
   ]
   
-  const skills = {
+  const skills: SkillsData = {
     frontend: [
       { name: 'HTML5', level: 95, icon: '🌐' },
       { name: 'CSS3/SCSS', level: 90, icon: '🎨' },
@@ -49,7 +60,7 @@ const Skills = () => {
         
         <div className="mb-8 flex flex-wrap gap-2">
           {tabs.map((tab) => (
-            <button
+            <motion.button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`px-6 py-2 rounded-full transition-all ${
@@ -57,67 +68,52 @@ const Skills = () => {
                   ? 'bg-primary text-white'
                   : 'bg-gray-100 dark:bg-secondary-light hover:bg-gray-200 dark:hover:bg-secondary'
               }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               {tab.label}
-            </button>
+            </motion.button>
           ))}
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills[activeTab as keyof typeof skills].map((skill) => (
-            <div key={skill.name} className="card hover:border-l-4 hover:border-primary">
-              <div className="flex justify-between items-center mb-3">
-                <div className="flex items-center gap-2">
-                  <span className="text-2xl">{skill.icon}</span>
-                  <h3 className="font-semibold">{skill.name}</h3>
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={activeTab}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
+            {skills[activeTab]?.map((skill, index) => (
+              <motion.div 
+                key={skill.name} 
+                className="card hover:border-l-4 hover:border-primary"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+              >
+                <div className="flex justify-between items-center mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">{skill.icon}</span>
+                    <h3 className="font-semibold">{skill.name}</h3>
+                  </div>
+                  <span className="text-primary font-bold">{skill.level}%</span>
                 </div>
-                <span className="text-primary font-bold">{skill.level}%</span>
-              </div>
-              
-              <div className="w-full bg-gray-200 dark:bg-secondary-light rounded-full h-2.5">
-                <div 
-                  className="bg-primary h-2.5 rounded-full" 
-                  style={{ width: `${skill.level}%` }}
-                ></div>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        <div className="mt-16 p-6 bg-gray-50 dark:bg-secondary-light rounded-xl">
-          <h3 className="text-xl font-bold mb-4">Languages</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium">English</span>
-                <span>Professional</span>
-              </div>
-              <div className="w-full bg-gray-200 dark:bg-secondary rounded-full h-2.5">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: '90%' }}></div>
-              </div>
-            </div>
-            
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium">Vietnamese</span>
-                <span>Native</span>
-              </div>
-              <div className="w-full bg-gray-200 dark:bg-secondary rounded-full h-2.5">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: '100%' }}></div>
-              </div>
-            </div>
-            
-            <div>
-              <div className="flex justify-between mb-1">
-                <span className="font-medium">Japanese</span>
-                <span>Basic</span>
-              </div>
-              <div className="w-full bg-gray-200 dark:bg-secondary rounded-full h-2.5">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: '40%' }}></div>
-              </div>
-            </div>
-          </div>
-        </div>
+                
+                <div className="w-full bg-gray-200 dark:bg-secondary-light rounded-full h-2.5">
+                  <motion.div 
+                    className="bg-primary h-2.5 rounded-full" 
+                    initial={{ width: 0 }}
+                    animate={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
+                  ></motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   )

@@ -37,7 +37,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} John Doe. All rights reserved.
+            &copy; {new Date().getFullYear()} Truong Minh Hoang. All rights reserved.
           </p>
           
           <p className="flex items-center gap-1 text-gray-400">
