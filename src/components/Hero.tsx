@@ -167,9 +167,8 @@ const Hero = () => {
                 <img 
                   src="/images/photo_id.png" 
                   alt="Truong Minh Hoang" 
-                  className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
               </motion.div>
               
               <motion.div 
