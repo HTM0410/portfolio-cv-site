@@ -165,7 +165,7 @@ const Hero = () => {
                 />
                 
                 <img 
-                  src="/images/photo_id.jpg" 
+                  src="/images/photo_id.png" 
                   alt="Truong Minh Hoang" 
                   className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
                 />
