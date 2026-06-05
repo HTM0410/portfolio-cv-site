@@ -135,7 +135,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                Là sinh viên năm 4 chuyên ngành Toán - Tin tại Đại học Bách khoa Hà Nội, tôi có định hướng và niềm đam mê mãnh liệt với vị trí AI Engineer. Mong muốn lớn nhất của tôi là được đào sâu vào kiến thức Deep Learning, đặc biệt ở lĩnh vực Computer Vision và Xử lý ngôn ngữ tự nhiên (LLM, RAG).
+                Là sinh viên năm cuối chuyên ngành Toán – Tin tại Đại học Bách khoa Hà Nội, tôi định hướng phát triển sự nghiệp trong lĩnh vực Trí tuệ nhân tạo với trọng tâm là Computer Vision và Generative AI.
               </motion.p>
               
               <motion.p 
@@ -144,7 +144,16 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                Tôi có khả năng nghiên cứu, học hỏi và triển khai các bài toán thực tế như phân đoạn ảnh, nhận diện khuôn mặt, phân tích hành vi và chống giả mạo khuôn mặt. Ngoài ra, tôi cũng có kinh nghiệm xây dựng các hệ thống Backend, Web Application để tích hợp và hiện thực hóa các mô hình AI.
+                Tôi có kinh nghiệm nghiên cứu và triển khai các bài toán AI như phân loại ảnh (Image Classification), phát hiện đối tượng (Object Detection), theo dõi đa đối tượng (Multi-Object Tracking), Re-Identification (ReID) và chatbot sử dụng Retrieval-Augmented Generation (RAG). Đồng thời, tôi có khả năng xây dựng Backend và Web Application để tích hợp, triển khai và vận hành các hệ thống AI trong môi trường thực tế.
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                Mục tiêu của tôi là trở thành AI Engineer, tham gia phát triển các sản phẩm AI có khả năng giải quyết những bài toán thực tiễn và tạo ra giá trị cho người dùng.
               </motion.p>
             </div>
             
@@ -159,22 +168,22 @@ const About = () => {
                 { 
                   icon: Scan, 
                   title: "Computer Vision", 
-                  desc: "Nhận diện khuôn mặt, phân đoạn ảnh (Segmentation), theo dõi đối tượng với YOLOv8, OpenCV." 
+                  desc: "Phân loại ảnh, phát hiện đối tượng, theo dõi đa đối tượng và Re-Identification bằng YOLOv8, ByteTrack, OpenCV." 
                 },
                 { 
                   icon: CheckCircle2, 
                   title: "Deep Learning", 
-                  desc: "Xây dựng và tối ưu mô hình học sâu, áp dụng PyTorch, triển khai hệ thống." 
+                  desc: "Xây dựng, huấn luyện và tối ưu mô hình Deep Learning với PyTorch, CNN và Transfer Learning." 
                 },
                 { 
                   icon: Server, 
-                  title: "Backend & Web", 
-                  desc: "Phát triển web full-stack, APIs với Node.js, Spring Boot, React." 
+                  title: "Backend & Deployment", 
+                  desc: "Phát triển API, Backend và tích hợp mô hình AI bằng Node.js, Spring Boot, FastAPI." 
                 },
                 { 
                   icon: Layers, 
                   title: "RAG & LLM", 
-                  desc: "Phát triển các ứng dụng chatbot thông minh, tích hợp RAG và LangChain." 
+                  desc: "Xây dựng chatbot AI sử dụng RAG, Vector Database, LangChain và LLM." 
                 }
               ].map((skill, index) => (
                 <motion.div 
