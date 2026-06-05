@@ -7,7 +7,8 @@ const Projects = () => {
   
   const categories = [
     { id: 'all', label: 'Tất cả Dự án' },
-    { id: 'ai', label: 'AI & Computer Vision' },
+    { id: 'vision', label: 'Computer Vision' },
+    { id: 'genai', label: 'Generative AI' },
     { id: 'web', label: 'Web Development' },
   ]
   
@@ -17,7 +18,7 @@ const Projects = () => {
       title: 'Hệ Thống Re-Identification Cầu Thủ Bóng Đá',
       description: 'Xây dựng pipeline Detection → Tracking → ReID để theo dõi và duy trì định danh cầu thủ. Sử dụng YOLOv8 phát hiện cầu thủ, BoT-SORT theo dõi đối tượng, mô hình ReID giảm hiện tượng đổi ID (ID Switch) khi bị che khuất.',
       image: '/images/football.png',
-      category: 'ai',
+      category: 'vision',
       technologies: ['Python', 'YOLOv8', 'BoT-SORT', 'PyTorch', 'OpenCV'],
       demoLink: '#',
       githubLink: '#',
@@ -28,7 +29,7 @@ const Projects = () => {
       title: 'Hệ Thống Nhận Diện Nguyên Liệu Từ Hình Ảnh',
       description: 'Hệ thống nhận diện 65 loại nguyên liệu thực phẩm đạt mAP@50 > 80% (tốc độ suy luận < 100ms) phục vụ gợi ý công thức nấu ăn tự động, được tích hợp vào ứng dụng CookSmart.',
       image: '/images/food.png',
-      category: 'ai',
+      category: 'vision',
       technologies: ['Python', 'YOLOv8', 'PyTorch', 'OpenCV'],
       demoLink: '#',
       githubLink: '#',
@@ -39,7 +40,7 @@ const Projects = () => {
       title: 'Chatbot AI Hỗ Trợ Nấu Ăn Sử Dụng RAG',
       description: 'Chatbot AI hỗ trợ tra cứu công thức, tư vấn nguyên liệu và hướng dẫn chế biến. Tích hợp pipeline RAG (Intent Detection, Retrieval, Response Gen) giúp giảm hiện tượng hallucination.',
       image: '/images/chatbot.png',
-      category: 'ai',
+      category: 'genai',
       technologies: ['LangChain', 'RAG', 'Vector Database', 'LLM', 'FastAPI'],
       demoLink: '#',
       githubLink: '#',
@@ -110,7 +111,7 @@ const Projects = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 key={project.id} 
-                className="card-glass group overflow-hidden flex flex-col h-full"
+                className="card-glass group overflow-hidden flex flex-col h-full p-6"
               >
                 <div className="relative overflow-hidden rounded-t-xl -mx-6 -mt-6 mb-6 h-64 shrink-0">
                   <img 
@@ -132,7 +133,8 @@ const Projects = () => {
                   {/* Badge */}
                   <div className="absolute top-4 right-4">
                     <span className="badge shadow-lg bg-white/90 dark:bg-dark-card/90">
-                      {project.category === 'ai' ? 'AI & Vision' : 'Web Dev'}
+                      {project.category === 'vision' ? 'Computer Vision' : 
+                       project.category === 'genai' ? 'Generative AI' : 'Web Dev'}
                     </span>
                   </div>
                 </div>
