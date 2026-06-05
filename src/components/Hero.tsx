@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Facebook, Mail, ScanFace, Eye, BrainCircuit } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
@@ -11,17 +11,24 @@ const Hero = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+  const yText = useTransform(scrollYProgress, [0, 1], [0, -50])
+  const yImage = useTransform(scrollYProgress, [0, 1], [0, 50])
+  const scaleImage = useTransform(scrollYProgress, [0, 1], [1, 0.9])
 
   return (
     <motion.section 
       ref={ref}
       id="home" 
-      className="min-h-screen flex items-center pt-16 bg-gradient-to-br from-white to-gray-100 dark:from-dark-bg dark:to-secondary-dark relative overflow-hidden"
+      className="min-h-screen flex items-center pt-16 relative overflow-hidden"
       style={{ opacity }}
     >
-      {/* Background parallax effect */}
+      {/* High-tech dynamic backgrounds */}
+      <div className="grid-pattern"></div>
+      <div className="glow-effect top-1/4 left-1/4"></div>
+      <div className="glow-effect bottom-1/4 right-1/4 bg-primary-light/10"></div>
+      
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"
+        className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent dark:from-primary/10 dark:to-dark-bg -z-10"
         style={{ y }}
       />
       
@@ -33,141 +40,152 @@ const Hero = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true, margin: "-100px" }}
-            style={{ y: useTransform(scrollYProgress, [0, 1], [0, -50]) }}
+            style={{ y: yText }}
           >
             <div className="space-y-6">
               <motion.div 
-                className="flex items-center gap-2"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="flex items-center gap-3 badge w-max px-4 py-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
               >
-                <div className="h-1 w-12 bg-primary"></div>
-                <p className="text-lg font-medium">Hello, I'm</p>
+                <BrainCircuit size={16} />
+                <span className="text-sm font-semibold tracking-wider uppercase">Sinh viên Đại học Bách khoa Hà Nội</span>
               </motion.div>
               
               <motion.h1 
-                className="font-bold leading-tight"
+                className="font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400"
                 initial={{ opacity: 0, x: -80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
               >
-                <span className="block">Truong Minh Hoang</span>
-                <span className="text-primary">Web Developer</span>
+                <span className="block text-4xl md:text-5xl lg:text-6xl mb-2">Trương Minh Hoàng</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400 text-5xl md:text-6xl lg:text-6xl drop-shadow-sm pb-2">
+                  AI Engineer Intern
+                </span>
+                <span className="block text-3xl md:text-4xl lg:text-4xl text-gray-500 dark:text-gray-400 mt-2">
+                  Computer Vision
+                </span>
               </motion.h1>
               
               <motion.p 
-                className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg"
+                className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed"
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
               >
-                I build exceptional and accessible digital experiences for the web.
-                Specialized in modern JavaScript frameworks and responsive design.
+                Đam mê đào sâu kiến thức về <span className="font-semibold text-primary">Deep Learning</span> và <span className="font-semibold text-primary">Computer Vision</span>. Mục tiêu là phát triển các hệ thống phân đoạn ảnh, nhận diện và phân tích hành vi trong môi trường thực tế.
               </motion.p>
               
               <motion.div 
-                className="flex flex-wrap gap-4"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="flex flex-wrap gap-4 pt-4"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
               >
+                <motion.a 
+                  href="#projects" 
+                  className="btn btn-primary group"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <ScanFace size={20} className="group-hover:animate-pulse" />
+                  Xem Các Dự Án
+                </motion.a>
                 <motion.a 
                   href="#contact" 
                   className="btn btn-outline"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Contact Me
-                </motion.a>
-                <motion.a 
-                  href="#projects" 
-                  className="btn btn-outline"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Projects
+                  Liên Hệ Ngay
                 </motion.a>
               </motion.div>
               
               <motion.div 
-                className="flex gap-4 pt-4"
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="flex gap-5 pt-8 items-center"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
               >
-                <motion.a 
-                  href="https://github.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-2 rounded-full border-2 border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary hover:text-primary transition-colors" 
-                  aria-label="GitHub"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Github size={20} />
-                </motion.a>
-                <motion.a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-2 rounded-full border-2 border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary hover:text-primary transition-colors" 
-                  aria-label="LinkedIn"
-                  whileHover={{ scale: 1.1, rotate: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Linkedin size={20} />
-                </motion.a>
-                <motion.a 
-                  href="mailto:hoangtruongminh22@gamil.com" 
-                  className="p-2 rounded-full border-2 border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary hover:text-primary transition-colors" 
-                  aria-label="Email"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Mail size={20} />
-                </motion.a>
+                <span className="text-sm font-medium text-gray-500 uppercase tracking-widest">Kết nối</span>
+                <div className="h-px w-12 bg-gray-300 dark:bg-gray-700"></div>
+                <div className="flex gap-4">
+                  {[
+                    { icon: Github, link: "https://github.com", label: "GitHub" },
+                    { icon: Facebook, link: "https://www.facebook.com/hoang.truongminh.108", label: "Facebook" },
+                    { icon: Mail, link: "mailto:hoangtruongminh22@gmail.com", label: "Email" }
+                  ].map((social, i) => (
+                    <motion.a 
+                      key={i}
+                      href={social.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="p-2.5 rounded-full bg-white dark:bg-dark-card shadow-md hover:shadow-primary/30 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all" 
+                      aria-label={social.label}
+                      whileHover={{ scale: 1.1, y: -3 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <social.icon size={22} />
+                    </motion.a>
+                  ))}
+                </div>
               </motion.div>
             </div>
           </motion.div>
           
           <motion.div 
-            className="order-1 md:order-2 flex justify-center"
-            initial={{ opacity: 0, x: 100, scale: 0.8 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            className="order-1 md:order-2 flex justify-center relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
-            style={{ 
-              y: useTransform(scrollYProgress, [0, 1], [0, 50]),
-              scale: useTransform(scrollYProgress, [0, 1], [1, 0.9])
-            }}
+            viewport={{ once: true }}
+            style={{ y: yImage, scale: scaleImage }}
           >
-            <div className="relative">
+            <div className="relative z-10 animate-float">
+              {/* Decorative elements behind image */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-blue-600 blur-2xl opacity-40 dark:opacity-60 scale-110 -z-10"></div>
+              <div className="absolute -inset-4 rounded-full border border-primary/30 animate-[spin_10s_linear_infinite] border-dashed"></div>
+              
               <motion.div 
-                className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-primary/10 dark:bg-primary/20 overflow-hidden border-4 border-primary/30"
-                whileHover={{ scale: 1.05 }}
+                className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-dark-card overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl relative"
+                whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
+                {/* Simulated scanning effect line */}
+                <motion.div 
+                  className="absolute left-0 right-0 h-1 bg-primary/80 shadow-[0_0_10px_rgba(14,165,233,0.8)] z-20"
+                  animate={{ top: ["0%", "100%", "0%"] }}
+                  transition={{ duration: 3, ease: "linear", repeat: Infinity }}
+                />
+                
                 <img 
                   src="/images/photo_id.jpg" 
                   alt="Truong Minh Hoang" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
               </motion.div>
+              
               <motion.div 
-                className="absolute -bottom-4 -right-4 bg-white dark:bg-dark-card p-3 rounded-lg shadow-lg"
-                initial={{ opacity: 0, scale: 0, x: 30 }}
-                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                className="absolute -bottom-6 -left-6 card-glass px-6 py-4 flex items-center gap-4"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true }}
               >
-                <div className="text-primary font-bold text-xl">0+</div>
-                <div className="text-sm">Years of<br />Experience</div>
+                <div className="p-3 bg-primary/20 rounded-xl text-primary">
+                  <Eye size={24} />
+                </div>
+                <div>
+                  <div className="text-2xl font-black text-gray-800 dark:text-white">GPA</div>
+                  <div className="text-sm font-medium text-gray-500 dark:text-gray-400">3.85 / 4.0<br/>ĐH Bách Khoa</div>
+                </div>
               </motion.div>
             </div>
           </motion.div>

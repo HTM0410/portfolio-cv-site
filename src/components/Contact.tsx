@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, Linkedin, Github, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Facebook, Github, X } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -44,13 +44,13 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-gray-50 dark:bg-secondary-dark">
       <div className="container-custom">
-        <h2 className="section-title">Get In Touch</h2>
+        <h2 className="section-title">Kết Nối Với Tôi</h2>
         
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6">Let's Talk About Your Project</h3>
+            <h3 className="text-2xl font-bold mb-6">Sẵn Sàng Hợp Tác</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              I'm interested in freelance opportunities – especially ambitious or large projects. However, if you have other requests or questions, don't hesitate to contact me using the form.
+              Tôi luôn cởi mở với các cơ hội làm việc trong lĩnh vực AI/ML, hợp tác nghiên cứu, hoặc các dự án phân tích dữ liệu đầy tham vọng. Dù bạn cần xây dựng một hệ thống MLOps, một ứng dụng tích hợp LLM hay giải pháp phân tích hình ảnh chuyên sâu — hãy liên hệ với tôi.
             </p>
             
             <div className="space-y-6">
@@ -71,7 +71,7 @@ const Contact = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Phone</h4>
+                  <h4 className="font-semibold">Điện thoại</h4>
                   <a href="tel:+84986122511" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                     +84 986 122 511
                   </a>
@@ -83,25 +83,25 @@ const Contact = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Location</h4>
+                  <h4 className="font-semibold">Địa chỉ</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Dong Da, Ha Noi, Vietnam
+                    Đống Đa, Hà Nội, Việt Nam
                   </p>
                 </div>
               </div>
             </div>
             
             <div className="mt-8">
-              <h4 className="font-semibold mb-4">Connect With Me</h4>
+              <h4 className="font-semibold mb-4">Các Kênh Khác</h4>
               <div className="flex gap-4">
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.facebook.com/hoang.truongminh.108" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-3 bg-white dark:bg-dark-card rounded-lg shadow-md text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                  aria-label="LinkedIn"
+                  aria-label="Facebook"
                 >
-                  <Linkedin size={24} />
+                  <Facebook size={24} />
                 </a>
                 <a 
                   href="https://github.com" 
@@ -117,9 +117,9 @@ const Contact = () => {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-3 bg-white dark:bg-dark-card rounded-lg shadow-md text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                  aria-label="Twitter"
+                  aria-label="X"
                 >
-                  <Twitter size={24} />
+                  <X size={24} />
                 </a>
               </div>
             </div>
@@ -127,24 +127,24 @@ const Contact = () => {
           
           <div>
             <form onSubmit={handleSubmit} className="card">
-              <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
+              <h3 className="text-2xl font-bold mb-6">Gửi Lời Nhắn</h3>
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg">
-                  Your message has been sent successfully! I'll get back to you soon.
+                  Tin nhắn của bạn đã được gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.
                 </div>
               )}
               
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-lg">
-                  There was an error sending your message. Please try again.
+                  Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại.
                 </div>
               )}
               
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block mb-2 font-medium">
-                    Your Name
+                    Họ Tên
                   </label>
                                      <input
                      type="text"
@@ -154,13 +154,13 @@ const Contact = () => {
                      onChange={handleChange}
                      required
                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                     placeholder="Truong Minh Hoang"
+                     placeholder="Ví dụ: Nguyễn Văn A"
                    />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block mb-2 font-medium">
-                    Your Email
+                    Email của bạn
                   </label>
                                      <input
                      type="email"
@@ -176,7 +176,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="subject" className="block mb-2 font-medium">
-                    Subject
+                    Chủ đề
                   </label>
                                      <input
                      type="text"
@@ -186,13 +186,13 @@ const Contact = () => {
                      onChange={handleChange}
                      required
                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                     placeholder="Web Development Project"
+                     placeholder="Hợp tác phát triển AI"
                    />
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block mb-2 font-medium">
-                    Your Message
+                    Nội dung
                   </label>
                                      <textarea
                      id="message"
@@ -202,7 +202,7 @@ const Contact = () => {
                      required
                      rows={5}
                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white resize-none"
-                     placeholder="Hello Truong Minh Hoang, I'd like to discuss a web development project..."
+                     placeholder="Xin chào Hoàng, tôi đang tìm kiếm một kỹ sư AI để..."
                    ></textarea>
                 </div>
                 
@@ -217,11 +217,11 @@ const Contact = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Sending...
+                      Đang gửi...
                     </>
                   ) : (
                     <>
-                      Send Message <Send size={18} className="ml-1" />
+                      Gửi Lời Nhắn <Send size={18} className="ml-1" />
                     </>
                   )}
                 </button>

@@ -1,4 +1,4 @@
-import { Code, Heart, ArrowUp } from 'lucide-react'
+import { Cpu, Heart, ArrowUp } from 'lucide-react'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,17 +13,17 @@ const Footer = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 text-xl font-bold mb-4 md:mb-0">
-            <Code size={24} className="text-primary" />
-            <span>DevPortfolio</span>
+            <Cpu size={24} className="text-primary" />
+            <span>AI Portfolio</span>
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
-            <a href="#home" className="hover:text-primary transition-colors">Home</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href="#home" className="hover:text-primary transition-colors">Trang chủ</a>
+            <a href="#about" className="hover:text-primary transition-colors">Về tôi</a>
+            <a href="#skills" className="hover:text-primary transition-colors">Kỹ năng</a>
+            <a href="#projects" className="hover:text-primary transition-colors">Dự án</a>
+            <a href="#experience" className="hover:text-primary transition-colors">Kinh nghiệm</a>
+            <a href="#contact" className="hover:text-primary transition-colors">Liên hệ</a>
           </div>
           
           <button 
@@ -37,11 +37,11 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Truong Minh Hoang. All rights reserved.
+            &copy; {new Date().getFullYear()} Trương Minh Hoàng. All rights reserved.
           </p>
           
           <p className="flex items-center gap-1 text-gray-400">
-            Made with <Heart size={16} className="text-primary" /> in Vietnam
+            Phát triển với <Heart size={16} className="text-primary" /> tại Việt Nam
           </p>
         </div>
       </div>

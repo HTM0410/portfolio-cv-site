@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Moon, Sun, Menu, X, Code } from 'lucide-react'
+import { Moon, Sun, Menu, X, Cpu } from 'lucide-react'
 
 interface NavbarProps {
   darkMode: boolean
@@ -28,12 +28,12 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
   }
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Trang chủ', href: '#home' },
+    { name: 'Về tôi', href: '#about' },
+    { name: 'Kỹ năng', href: '#skills' },
+    { name: 'Dự án', href: '#projects' },
+    { name: 'Kinh nghiệm', href: '#experience' },
+    { name: 'Liên hệ', href: '#contact' },
   ]
 
   return (
@@ -42,8 +42,8 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
     }`}>
       <nav className="container-custom py-4 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2 text-xl font-bold text-primary">
-          <Code size={28} />
-          <span>DevPortfolio</span>
+          <Cpu size={28} />
+          <span>AI Portfolio</span>
         </a>
 
         {/* Desktop Navigation */}

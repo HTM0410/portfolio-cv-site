@@ -9,19 +9,20 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#E53E3E', // Red
-          dark: '#C53030',
-          light: '#FC8181',
+          DEFAULT: '#0ea5e9', // Sky blue / Cyan
+          dark: '#0284c7',
+          light: '#38bdf8',
+          neon: '#00f6ff',
         },
         secondary: {
-          DEFAULT: '#1A202C', // Dark gray/black
-          light: '#2D3748',
-          dark: '#171923',
+          DEFAULT: '#1e293b', // Slate 800
+          light: '#334155',
+          dark: '#0f172a',
         },
         dark: {
-          bg: '#121212',
-          card: '#1E1E1E',
-          text: '#E2E8F0',
+          bg: '#050814', // Deep dark blue/black
+          card: '#0f172a', // Slate 900
+          text: '#f8fafc',
         },
       },
       fontFamily: {
@@ -30,6 +31,18 @@ export default {
       },
       animation: {
         'bounce-slow': 'bounce 3s infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulseGlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: 1, filter: 'brightness(1)' },
+          '50%': { opacity: .7, filter: 'brightness(1.5)' },
+        }
       }
     },
   },

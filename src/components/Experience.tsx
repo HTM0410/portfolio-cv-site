@@ -1,112 +1,132 @@
-import { Briefcase, GraduationCap, Calendar } from 'lucide-react'
+import { Briefcase, GraduationCap, Calendar, Award } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const Experience = () => {
   const workExperience = [
     {
       id: 1,
-      title: 'Senior Frontend Developer',
-      company: 'Tech Innovations Inc.',
-      location: 'Ho Chi Minh City',
-      period: 'Jan 2021 - Present',
-      description: 'Lead the frontend development team in building modern web applications using React and TypeScript. Implemented responsive designs, optimized performance, and mentored junior developers.',
-      skills: ['React', 'TypeScript', 'Redux', 'Next.js', 'Tailwind CSS'],
+      title: 'AI Engineer Intern',
+      company: 'Công ty VNPT AI',
+      location: 'Hà Nội',
+      period: '2026',
+      description: 'Nghiên cứu kiến thức nền tảng về Machine Learning, Deep Learning và Computer Vision. Xây dựng các mô hình nhận dạng hình ảnh và phân tích dữ liệu. Thực hiện các dự án CV bằng CNN, YOLOv8 và OpenCV. Tối ưu mô hình AI cho ứng dụng thực tế. Tích hợp mô hình ngôn ngữ lớn (LLM) và RAG.',
+      skills: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'YOLOv8', 'LLM', 'RAG'],
     },
     {
       id: 2,
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      location: 'Remote',
-      period: 'Mar 2019 - Dec 2020',
-      description: 'Developed and maintained full-stack web applications using the MERN stack. Collaborated with designers and product managers to deliver high-quality software solutions.',
-      skills: ['MongoDB', 'Express.js', 'React', 'Node.js', 'RESTful APIs'],
-    },
-    {
-      id: 3,
-      title: 'Frontend Developer',
-      company: 'WebCraft Agency',
-      location: 'Ho Chi Minh City',
-      period: 'Jun 2017 - Feb 2019',
-      description: 'Created responsive and interactive user interfaces for various client projects. Worked with design teams to implement pixel-perfect designs and ensure cross-browser compatibility.',
-      skills: ['JavaScript', 'HTML5', 'CSS3/SCSS', 'jQuery', 'Bootstrap'],
+      title: 'Thực tập sinh (Software)',
+      company: 'Tổng Công ty Hạ tầng mạng VNPT Net',
+      location: 'Hà Nội',
+      period: '2025',
+      description: 'Tham gia phát triển và tối ưu hệ thống quản lý hạ tầng mạng nội bộ. Làm việc với ngôn ngữ Java, Spring Boot và Oracle Database trong môi trường doanh nghiệp quy mô lớn. Thực hiện bảo trì, kiểm thử và nâng cao hiệu năng các chức năng hệ thống.',
+      skills: ['Java', 'Spring Boot', 'Oracle Database', 'Testing', 'System Optimization'],
     },
   ]
   
   const education = [
     {
       id: 1,
-      degree: 'Master of Computer Science',
-      institution: 'Vietnam National University',
-      location: 'Ho Chi Minh City',
-      period: '2015 - 2017',
-      description: 'Specialized in Web Technologies and Software Engineering. Graduated with honors.',
-    },
-    {
-      id: 2,
-      degree: 'Bachelor of Computer Science',
-      institution: 'Ho Chi Minh City University of Technology',
-      location: 'Ho Chi Minh City',
-      period: '2011 - 2015',
-      description: 'Focused on Software Development and Database Management. Participated in various coding competitions.',
+      degree: 'Sinh viên chuyên ngành Toán - Tin (Năm 4)',
+      institution: 'Đại học Bách khoa Hà Nội',
+      location: 'Hà Nội',
+      period: '2022 - Nay',
+      description: 'Điểm CPA: 2.82/4 | GPA: 3.85/4. Đạt Học bổng khuyến khích học tập kỳ 2025.2. Chú trọng vào các kiến thức nền tảng toán học ứng dụng cho Trí tuệ Nhân tạo và Khoa học Dữ liệu.',
     },
   ]
   
   const certifications = [
     {
       id: 1,
-      name: 'AWS Certified Developer - Associate',
-      issuer: 'Amazon Web Services',
-      date: 'Dec 2022',
-      link: 'https://aws.amazon.com/certification/',
+      name: 'Neural Networks & Deep Learning',
+      issuer: 'Coursera - DeepLearning.AI',
+      date: 'Hoàn thành',
+      link: '#',
     },
     {
       id: 2,
-      name: 'Professional Frontend Developer',
-      issuer: 'Meta (formerly Facebook)',
-      date: 'Aug 2021',
-      link: 'https://www.coursera.org/professional-certificates/meta-front-end-developer',
-    },
-    {
-      id: 3,
-      name: 'MongoDB Certified Developer',
-      issuer: 'MongoDB University',
-      date: 'Mar 2020',
-      link: 'https://university.mongodb.com/certification',
+      name: 'Chứng chỉ tiếng Anh TOEIC 580',
+      issuer: 'IIG Vietnam',
+      date: 'Hoàn thành',
+      link: '#',
     },
   ]
 
+  const activities = [
+    {
+      id: 1,
+      role: 'Phó chủ nhiệm',
+      organization: 'CLB Tranh biện HUST',
+    },
+    {
+      id: 2,
+      role: 'Trưởng Ban Tổ chức',
+      organization: 'HUST Debate Open Champion',
+    },
+    {
+      id: 3,
+      role: 'Phó Ban Tổ chức',
+      organization: 'Talkshow "Giao lưu"',
+    }
+  ]
+
   return (
-    <section id="experience" className="bg-white dark:bg-dark-bg">
+    <section id="experience" className="bg-gray-50 dark:bg-dark-bg relative overflow-hidden">
+      <div className="absolute left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-primary/5 to-transparent pointer-events-none"></div>
+      
       <div className="container-custom">
-        <h2 className="section-title">Experience</h2>
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
+          Kinh Nghiệm & Học Vấn
+        </motion.h2>
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <Briefcase size={24} className="text-primary" />
-              <h3 className="text-2xl font-bold">Work Experience</h3>
-            </div>
+            <motion.div 
+              className="flex items-center gap-3 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                <Briefcase size={24} />
+              </div>
+              <h3 className="text-2xl font-bold">Kinh nghiệm Làm việc</h3>
+            </motion.div>
             
-            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gray-200 dark:before:bg-secondary-light">
-              {workExperience.map((job) => (
-                <div key={job.id} className="relative pl-12">
-                  <div className="absolute left-0 top-1 w-10 h-10 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center">
-                    <div className="w-5 h-5 bg-primary rounded-full"></div>
+            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-primary/50 before:to-transparent">
+              {workExperience.map((job, idx) => (
+                <motion.div 
+                  key={job.id} 
+                  className="relative pl-12"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="absolute left-0 top-1 w-10 h-10 bg-white dark:bg-dark-bg border-4 border-primary/30 rounded-full flex items-center justify-center shadow-[0_0_10px_rgba(14,165,233,0.3)]">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
                   </div>
                   
-                  <div className="card">
+                  <div className="card-glass p-6 group hover:border-primary/50 transition-colors">
                     <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
-                      <h4 className="text-xl font-bold">{job.title}</h4>
-                      <div className="flex items-center gap-1 text-sm bg-gray-100 dark:bg-secondary-light px-3 py-1 rounded-full">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">{job.title}</h4>
+                      <div className="flex items-center gap-1 text-sm bg-primary/10 text-primary px-3 py-1 rounded-full font-medium">
                         <Calendar size={14} />
                         <span>{job.period}</span>
                       </div>
                     </div>
                     
-                    <div className="text-primary font-medium mb-4">
-                      {job.company} • {job.location}
+                    <div className="text-gray-600 dark:text-gray-400 font-medium mb-4 flex items-center gap-2">
+                      <span>{job.company}</span>
+                      <span className="w-1 h-1 rounded-full bg-gray-400"></span>
+                      <span>{job.location}</span>
                     </div>
                     
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                       {job.description}
                     </p>
                     
@@ -114,33 +134,46 @@ const Experience = () => {
                       {job.skills.map((skill, index) => (
                         <span 
                           key={index} 
-                          className="text-xs px-3 py-1 bg-primary/10 dark:bg-primary/20 text-primary rounded-full"
+                          className="text-xs font-medium px-2.5 py-1 bg-white/50 dark:bg-secondary-light/50 border border-gray-200 dark:border-gray-700 rounded text-gray-700 dark:text-gray-300"
                         >
                           {skill}
                         </span>
                       ))}
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
             
-            <div className="flex items-center gap-2 mt-12 mb-6">
-              <GraduationCap size={24} className="text-primary" />
-              <h3 className="text-2xl font-bold">Education</h3>
-            </div>
+            <motion.div 
+              className="flex items-center gap-3 mt-16 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                <GraduationCap size={24} />
+              </div>
+              <h3 className="text-2xl font-bold">Học vấn</h3>
+            </motion.div>
             
-            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gray-200 dark:before:bg-secondary-light">
+            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary/50 before:to-transparent">
               {education.map((edu) => (
-                <div key={edu.id} className="relative pl-12">
-                  <div className="absolute left-0 top-1 w-10 h-10 bg-primary/10 dark:bg-primary/20 rounded-full flex items-center justify-center">
-                    <div className="w-5 h-5 bg-primary rounded-full"></div>
+                <motion.div 
+                  key={edu.id} 
+                  className="relative pl-12"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="absolute left-0 top-1 w-10 h-10 bg-white dark:bg-dark-bg border-4 border-gray-200 dark:border-gray-700 rounded-full flex items-center justify-center">
+                    <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
                   </div>
                   
-                  <div className="card">
+                  <div className="card-glass p-6">
                     <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
-                      <h4 className="text-xl font-bold">{edu.degree}</h4>
-                      <div className="flex items-center gap-1 text-sm bg-gray-100 dark:bg-secondary-light px-3 py-1 rounded-full">
+                      <h4 className="text-xl font-bold text-gray-900 dark:text-white">{edu.degree}</h4>
+                      <div className="flex items-center gap-1 text-sm bg-gray-100 dark:bg-secondary-light text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full">
                         <Calendar size={14} />
                         <span>{edu.period}</span>
                       </div>
@@ -154,74 +187,53 @@ const Experience = () => {
                       {edu.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
           
-          <div>
-            <div className="card sticky top-24">
-              <h3 className="text-xl font-bold mb-6">Certifications</h3>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="card-glass p-8 sticky top-24">
+              <h3 className="text-xl font-bold mb-8 flex items-center gap-2">
+                <span className="w-8 h-1 bg-primary rounded-full"></span>
+                Chứng chỉ
+              </h3>
               
               <div className="space-y-6">
                 {certifications.map((cert) => (
-                  <div key={cert.id} className="border-b border-gray-100 dark:border-secondary-light pb-4 last:border-0">
-                    <h4 className="font-semibold mb-1">{cert.name}</h4>
-                    <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                      {cert.issuer} • {cert.date}
+                  <div key={cert.id} className="border-l-2 border-transparent hover:border-primary pl-4 transition-colors">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{cert.name}</h4>
+                    <div className="text-sm text-gray-500 mb-2">
+                      {cert.issuer}
                     </div>
-                    <a 
-                      href={cert.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-sm text-primary hover:underline"
-                    >
-                      View Certificate
-                    </a>
                   </div>
                 ))}
               </div>
               
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">Languages</h3>
-                <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>English</span>
-                      <span className="text-primary">Professional</span>
+              <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-800">
+                <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+                  <span className="w-8 h-1 bg-primary rounded-full"></span>
+                  Hoạt động
+                </h3>
+                <div className="space-y-4">
+                  {activities.map((act) => (
+                    <div key={act.id} className="flex gap-3 items-start">
+                      <div className="mt-1 text-primary"><Award size={16} /></div>
+                      <div>
+                        <div className="font-medium text-gray-900 dark:text-white">{act.role}</div>
+                        <div className="text-sm text-gray-500">{act.organization}</div>
+                      </div>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-secondary rounded-full h-1.5">
-                      <div className="bg-primary h-1.5 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span>Vietnamese</span>
-                      <span className="text-primary">Native</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-secondary rounded-full h-1.5">
-                      <div className="bg-primary h-1.5 rounded-full" style={{ width: '100%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-8">
-                <h3 className="text-xl font-bold mb-4">Interests</h3>
-                <div className="flex flex-wrap gap-2">
-                  {['Web Development', 'UI/UX Design', 'Open Source', 'Tech Blogging', 'Photography', 'Hiking'].map((interest, index) => (
-                    <span 
-                      key={index} 
-                      className="text-sm px-3 py-1 bg-gray-100 dark:bg-secondary-light rounded-full"
-                    >
-                      {interest}
-                    </span>
                   ))}
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
