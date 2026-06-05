@@ -50,7 +50,7 @@ const Projects = () => {
       id: 4,
       title: 'CookSmart – Website Gợi ý Công Thức Nấu Ăn',
       description: 'Ứng dụng web full-stack gợi ý công thức nấu ăn dựa trên nguyên liệu. Cung cấp API tài liệu hóa qua Swagger, áp dụng rate limiting, bảo mật JWT và realtime qua Socket.IO.',
-      image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80',
+      image: '/images/cooksmart.png',
       category: 'web',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.IO'],
       demoLink: '#',
@@ -157,16 +157,7 @@ const Projects = () => {
           </AnimatePresence>
         </motion.div>
         
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline group">
-            Xem Toàn Bộ Trên GitHub <Activity size={18} className="group-hover:animate-pulse" />
-          </a>
-        </motion.div>
+
       </div>
     </section>
   )
