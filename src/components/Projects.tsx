@@ -16,7 +16,7 @@ const Projects = () => {
       id: 1,
       title: 'Hệ Thống Re-Identification Cầu Thủ Bóng Đá',
       description: 'Xây dựng pipeline Detection → Tracking → ReID để theo dõi và duy trì định danh cầu thủ. Sử dụng YOLOv8 phát hiện cầu thủ, BoT-SORT theo dõi đối tượng, mô hình ReID giảm hiện tượng đổi ID (ID Switch) khi bị che khuất.',
-      image: 'https://images.unsplash.com/photo-1518605368461-1ee7c532066d?auto=format&fit=crop&w=800&q=80',
+      image: '/images/football.png',
       category: 'ai',
       technologies: ['Python', 'YOLOv8', 'BoT-SORT', 'PyTorch', 'OpenCV'],
       demoLink: '#',
@@ -27,7 +27,7 @@ const Projects = () => {
       id: 2,
       title: 'Hệ Thống Nhận Diện Nguyên Liệu Từ Hình Ảnh',
       description: 'Hệ thống nhận diện 65 loại nguyên liệu thực phẩm đạt mAP@50 > 80% (tốc độ suy luận < 100ms) phục vụ gợi ý công thức nấu ăn tự động, được tích hợp vào ứng dụng CookSmart.',
-      image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?auto=format&fit=crop&w=800&q=80',
+      image: '/images/food.png',
       category: 'ai',
       technologies: ['Python', 'YOLOv8', 'PyTorch', 'OpenCV'],
       demoLink: '#',
@@ -38,7 +38,7 @@ const Projects = () => {
       id: 3,
       title: 'Chatbot AI Hỗ Trợ Nấu Ăn Sử Dụng RAG',
       description: 'Chatbot AI hỗ trợ tra cứu công thức, tư vấn nguyên liệu và hướng dẫn chế biến. Tích hợp pipeline RAG (Intent Detection, Retrieval, Response Gen) giúp giảm hiện tượng hallucination.',
-      image: 'https://images.unsplash.com/photo-1531297172867-68b3ff1df854?auto=format&fit=crop&w=800&q=80',
+      image: '/images/chatbot.png',
       category: 'ai',
       technologies: ['LangChain', 'RAG', 'Vector Database', 'LLM', 'FastAPI'],
       demoLink: '#',
@@ -110,9 +110,9 @@ const Projects = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 key={project.id} 
-                className="card-glass group overflow-hidden"
+                className="card-glass group overflow-hidden flex flex-col h-full"
               >
-                <div className="relative overflow-hidden rounded-t-xl -mx-6 -mt-6 mb-6 h-64">
+                <div className="relative overflow-hidden rounded-t-xl -mx-6 -mt-6 mb-6 h-64 shrink-0">
                   <img 
                     src={project.image} 
                     alt={project.title} 
