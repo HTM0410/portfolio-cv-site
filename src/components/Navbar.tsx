@@ -82,7 +82,7 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
             aria-label="Toggle language"
           >
             <Globe size={18} />
-            <span className="text-sm">{i18n.language?.startsWith('vi') ? 'EN' : 'VI'}</span>
+            <span className="text-sm">{i18n.language?.startsWith('vi') ? 'VI' : 'EN'}</span>
           </button>
         </div>
 
@@ -101,7 +101,7 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
             className="p-2 rounded-full font-bold bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
             aria-label="Toggle language"
           >
-            <span className="text-sm">{i18n.language?.startsWith('vi') ? 'EN' : 'VI'}</span>
+            <span className="text-sm">{i18n.language?.startsWith('vi') ? 'VI' : 'EN'}</span>
           </button>
           
           <button 

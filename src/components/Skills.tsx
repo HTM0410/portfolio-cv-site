@@ -6,23 +6,23 @@ const Skills = () => {
   const { t } = useTranslation()
   const coreCompetencies = [
     { 
-      name: 'Computer Vision', 
-      description: 'YOLOv8, OpenCV, Image Segmentation, Object Detection',
+      name: t('skills.core_items.cv.title'), 
+      description: t('skills.core_items.cv.desc'),
       icon: <Eye className="text-cyan-400" size={24} />
     },
     { 
-      name: 'Machine Learning & Deep Learning', 
-      description: 'PyTorch, Scikit-learn, xây dựng mô hình CNN',
+      name: t('skills.core_items.ml.title'), 
+      description: t('skills.core_items.ml.desc'),
       icon: <Brain className="text-purple-400" size={24} />
     },
     { 
-      name: 'Generative AI & LLM', 
-      description: 'LangChain, Retrieval-Augmented Generation (RAG)',
+      name: t('skills.core_items.genai.title'), 
+      description: t('skills.core_items.genai.desc'),
       icon: <Layers className="text-emerald-400" size={24} />
     },
     { 
-      name: 'Web Development', 
-      description: 'Phát triển Full-stack với React, Node.js, Spring Boot',
+      name: t('skills.core_items.web.title'), 
+      description: t('skills.core_items.web.desc'),
       icon: <Server className="text-yellow-400" size={24} />
     },
   ]
@@ -130,7 +130,7 @@ const Skills = () => {
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-[50px] group-hover:bg-cyan-500/20 transition-colors duration-500"></div>
               
               <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <Brain className="text-cyan-400" /> Cốt Lõi
+                <Brain className="text-cyan-400" /> {t('skills.core')}
               </h3>
               
               <div className="space-y-6 relative z-10">

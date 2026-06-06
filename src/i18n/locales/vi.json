@@ -13,7 +13,9 @@
     "role": "Sinh viên Đại học Bách khoa Hà Nội | AI Engineer Intern",
     "description": "Đam mê nghiên cứu và phát triển các hệ thống Trí tuệ nhân tạo, tập trung vào Computer Vision và Machine Learning.",
     "cta": "Xem Dự Án",
-    "contact": "Liên Hệ Ngay"
+    "contact": "Liên Hệ Ngay",
+    "connect": "Kết nối",
+    "gpa_school": "ĐH Bách Khoa"
   },
   "about": {
     "title": "Về Bản Thân",
@@ -105,6 +107,25 @@
       "languages": "Ngôn Ngữ & Công Cụ",
       "backend": "Backend & Database",
       "frontend": "Frontend Development"
+    },
+    "core": "Cốt Lõi",
+    "core_items": {
+      "cv": {
+        "title": "Computer Vision",
+        "desc": "YOLOv8, OpenCV, Image Segmentation, Object Detection"
+      },
+      "ml": {
+        "title": "Machine Learning & Deep Learning",
+        "desc": "PyTorch, Scikit-learn, xây dựng mô hình CNN"
+      },
+      "genai": {
+        "title": "Generative AI & LLM",
+        "desc": "LangChain, Retrieval-Augmented Generation (RAG)"
+      },
+      "web": {
+        "title": "Web Development",
+        "desc": "Phát triển Full-stack với React, Node.js, Spring Boot"
+      }
     }
   },
   "projects": {

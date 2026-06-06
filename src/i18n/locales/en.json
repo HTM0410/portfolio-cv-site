@@ -10,10 +10,12 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Truong Minh Hoang",
-    "role": "Student at HUST | AI Engineer Intern",
+    "role": "Student at Hanoi University of Science and Technology | AI Engineer Intern",
     "description": "Passionate about researching and developing Artificial Intelligence systems, focusing on Computer Vision and Machine Learning.",
     "cta": "View Projects",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "connect": "Connect",
+    "gpa_school": "HUST"
   },
   "about": {
     "title": "About Me",
@@ -105,6 +107,25 @@
       "languages": "Languages & Tools",
       "backend": "Backend & Database",
       "frontend": "Frontend Development"
+    },
+    "core": "Core",
+    "core_items": {
+      "cv": {
+        "title": "Computer Vision",
+        "desc": "YOLOv8, OpenCV, Image Segmentation, Object Detection"
+      },
+      "ml": {
+        "title": "Machine Learning & Deep Learning",
+        "desc": "PyTorch, Scikit-learn, building CNN models"
+      },
+      "genai": {
+        "title": "Generative AI & LLM",
+        "desc": "LangChain, Retrieval-Augmented Generation (RAG)"
+      },
+      "web": {
+        "title": "Web Development",
+        "desc": "Full-stack development with React, Node.js, Spring Boot"
+      }
     }
   },
   "projects": {

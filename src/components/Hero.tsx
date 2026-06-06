@@ -115,7 +115,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 1.0 }}
                 viewport={{ once: true }}
               >
-                <span className="text-sm font-medium text-gray-500 uppercase tracking-widest">Kết nối</span>
+                <span className="text-sm font-medium text-gray-500 uppercase tracking-widest">{t('hero.connect')}</span>
                 <div className="h-px w-12 bg-gray-300 dark:bg-gray-700"></div>
                 <div className="flex gap-4">
                   {[
@@ -185,7 +185,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <div className="text-2xl font-black text-gray-800 dark:text-white">GPA</div>
-                  <div className="text-sm font-medium text-gray-500 dark:text-gray-400">3.85 / 4.0<br/>ĐH Bách Khoa</div>
+                  <div className="text-sm font-medium text-gray-500 dark:text-gray-400">3.85 / 4.0<br/>{t('hero.gpa_school')}</div>
                 </div>
               </motion.div>
             </div>
