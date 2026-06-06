@@ -96,9 +96,9 @@ const About = () => {
                 viewport={{ once: true }}
               >
                 <motion.a 
-                  href="/resume.pdf" 
+                  href="/CV_Truong_Minh_Hoang_en.pdf" 
                   className="btn btn-primary w-full flex items-center justify-center gap-2" 
-                  download
+                  download="CV_Truong_Minh_Hoang.pdf"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
