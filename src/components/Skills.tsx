@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
 import { Brain, Code, Cpu, Eye, Layers, Server, Activity, Target, Zap, Maximize } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const Skills = () => {
+  const { t } = useTranslation()
   const coreCompetencies = [
     { 
       name: 'Computer Vision', 
@@ -28,7 +30,7 @@ const Skills = () => {
   const techCategories = [
     {
       id: 'ai-ml',
-      title: 'AI / Machine Learning',
+      title: t('skills.categories.ai'),
       icon: <Brain size={20} />,
       color: 'from-purple-500/20 to-fuchsia-500/20',
       borderColor: 'group-hover:border-purple-400/50',
@@ -36,7 +38,7 @@ const Skills = () => {
     },
     {
       id: 'languages',
-      title: 'Ngôn ngữ / Công cụ',
+      title: t('skills.categories.languages'),
       icon: <Code size={20} />,
       color: 'from-blue-500/20 to-cyan-500/20',
       borderColor: 'group-hover:border-blue-400/50',
@@ -44,7 +46,7 @@ const Skills = () => {
     },
     {
       id: 'backend',
-      title: 'Backend & Cơ sở dữ liệu',
+      title: t('skills.categories.backend'),
       icon: <Server size={20} />,
       color: 'from-emerald-500/20 to-teal-500/20',
       borderColor: 'group-hover:border-emerald-400/50',
@@ -52,7 +54,7 @@ const Skills = () => {
     },
     {
       id: 'frontend',
-      title: 'Frontend Development',
+      title: t('skills.categories.frontend'),
       icon: <Target size={20} />,
       color: 'from-orange-500/20 to-red-500/20',
       borderColor: 'group-hover:border-orange-400/50',
@@ -101,7 +103,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            Năng Lực <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Chuyên Môn</span>
+            {t('skills.title')}
           </motion.h2>
           <motion.p 
             className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed"
@@ -109,7 +111,7 @@ const Skills = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, delay: 0.2 }}
           >
-            Cấu trúc công nghệ bao quát từ việc xây dựng các mô hình AI/Computer Vision chuyên sâu đến phát triển và tích hợp hệ thống Web hoàn chỉnh.
+            {t('skills.subtitle')}
           </motion.p>
         </div>
         

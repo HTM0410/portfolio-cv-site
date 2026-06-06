@@ -1,8 +1,10 @@
 import { Github, Facebook, Mail, ScanFace, Eye, BrainCircuit } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Hero = () => {
+  const { t } = useTranslation()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -51,7 +53,7 @@ const Hero = () => {
                 viewport={{ once: true }}
               >
                 <BrainCircuit size={16} />
-                <span className="text-sm font-semibold tracking-wider uppercase">Sinh viên Đại học Bách khoa Hà Nội</span>
+                <span className="text-sm font-semibold tracking-wider uppercase">{t('hero.greeting')}</span>
               </motion.div>
               
               <motion.h1 
@@ -61,9 +63,9 @@ const Hero = () => {
                 transition={{ duration: 1, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <span className="block text-4xl md:text-5xl lg:text-6xl mb-2">Trương Minh Hoàng</span>
+                <span className="block text-4xl md:text-5xl lg:text-6xl mb-2">{t('hero.name')}</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400 text-5xl md:text-6xl lg:text-6xl drop-shadow-sm pb-2">
-                  AI Engineer Intern
+                  {t('hero.role')}
                 </span>
                 <span className="block text-3xl md:text-4xl lg:text-4xl text-gray-500 dark:text-gray-400 mt-2">
                   Computer Vision
@@ -77,7 +79,7 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                Đam mê đào sâu kiến thức về <span className="font-semibold text-primary">Deep Learning</span> và <span className="font-semibold text-primary">Computer Vision</span>. Mục tiêu là phát triển các hệ thống phân đoạn ảnh, nhận diện và phân tích hành vi trong môi trường thực tế.
+                {t('hero.description')}
               </motion.p>
               
               <motion.div 
@@ -94,7 +96,7 @@ const Hero = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <ScanFace size={20} className="group-hover:animate-pulse" />
-                  Xem Các Dự Án
+                  {t('hero.cta')}
                 </motion.a>
                 <motion.a 
                   href="#contact" 
@@ -102,7 +104,7 @@ const Hero = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Liên Hệ Ngay
+                  {t('hero.contact')}
                 </motion.a>
               </motion.div>
               

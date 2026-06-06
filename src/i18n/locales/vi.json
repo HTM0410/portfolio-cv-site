@@ -1,0 +1,157 @@
+{
+  "navbar": {
+    "home": "Trang chủ",
+    "about": "Về tôi",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "experience": "Kinh nghiệm",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "greeting": "Xin chào, mình là",
+    "name": "Trương Minh Hoàng",
+    "role": "Sinh viên Đại học Bách khoa Hà Nội | AI Engineer Intern",
+    "description": "Đam mê nghiên cứu và phát triển các hệ thống Trí tuệ nhân tạo, tập trung vào Computer Vision và Machine Learning.",
+    "cta": "Xem Dự Án",
+    "contact": "Liên Hệ Ngay"
+  },
+  "about": {
+    "title": "Về Bản Thân",
+    "personal_info": "Thông Tin Cá Nhân",
+    "fullname": "Họ Tên",
+    "university": "Đại học",
+    "major": "Ngành học",
+    "address": "Địa Chỉ",
+    "phone": "Điện Thoại",
+    "email": "Email",
+    "download_cv": "Tải Xuống CV",
+    "headline": "Phát triển các hệ thống Trí tuệ Nhân tạo thông minh.",
+    "paragraph1": "Là sinh viên năm cuối chuyên ngành Toán – Tin tại Đại học Bách khoa Hà Nội, tôi định hướng phát triển sự nghiệp trong lĩnh vực Trí tuệ nhân tạo với trọng tâm là Computer Vision và Generative AI.",
+    "paragraph2": "Tôi có kinh nghiệm nghiên cứu và triển khai các bài toán AI như phân loại ảnh (Image Classification), phát hiện đối tượng (Object Detection), theo dõi đa đối tượng (Multi-Object Tracking), Re-Identification (ReID) và chatbot sử dụng Retrieval-Augmented Generation (RAG). Đồng thời, tôi có khả năng xây dựng Backend và Web Application để tích hợp, triển khai và vận hành các hệ thống AI trong môi trường thực tế.",
+    "paragraph3": "Mục tiêu của tôi là trở thành AI Engineer, tham gia phát triển các sản phẩm AI có khả năng giải quyết những bài toán thực tiễn và tạo ra giá trị cho người dùng.",
+    "skills": {
+      "cv": {
+        "title": "Computer Vision",
+        "desc": "Phân loại ảnh, phát hiện đối tượng, theo dõi đa đối tượng và Re-Identification bằng YOLOv8, ByteTrack, OpenCV."
+      },
+      "dl": {
+        "title": "Deep Learning",
+        "desc": "Xây dựng, huấn luyện và tối ưu mô hình Deep Learning với PyTorch, CNN và Transfer Learning."
+      },
+      "backend": {
+        "title": "Backend & Deployment",
+        "desc": "Phát triển API, Backend và tích hợp mô hình AI bằng Node.js, Spring Boot, FastAPI."
+      },
+      "rag": {
+        "title": "RAG & LLM",
+        "desc": "Xây dựng chatbot AI sử dụng RAG, Vector Database, LangChain và LLM."
+      }
+    }
+  },
+  "experience": {
+    "title": "Học Vấn & Kinh Nghiệm",
+    "subtitle": "Hành trình học tập và phát triển sự nghiệp của tôi trong lĩnh vực công nghệ.",
+    "work": "Kinh Nghiệm Làm Việc",
+    "education": "Học Vấn",
+    "certificate": "Chứng Chỉ Nổi Bật",
+    "activities": "Hoạt Động",
+    "work_items": {
+      "vnpt_ai": {
+        "title": "AI Engineer Intern",
+        "company": "Công ty VNPT AI",
+        "date": "03/2026 - Nay",
+        "desc": "Nghiên cứu và triển khai các mô hình Computer Vision. Tối ưu hóa thuật toán nhận diện và tích hợp vào hệ thống thực tế."
+      },
+      "vnpt_net": {
+        "title": "Thực tập sinh Software",
+        "company": "Tổng Công ty Hạ tầng mạng VNPT Net",
+        "date": "06/2025 - 11/2025",
+        "desc": "Tham gia phát triển phần mềm nội bộ, làm quen với quy trình phát triển dự án thực tế."
+      }
+    },
+    "edu_items": {
+      "hust": {
+        "title": "Đại học Bách Khoa Hà Nội",
+        "date": "2022 - Nay",
+        "desc": "Chuyên ngành Toán - Tin. Đạt Học bổng Khuyến khích học tập kỳ 2025.2."
+      }
+    },
+    "cert_items": {
+      "dl": {
+        "title": "DeepLearning.AI",
+        "date": "2024",
+        "desc": "Chứng chỉ chuyên sâu về Deep Learning và Neural Networks."
+      },
+      "toeic": {
+        "title": "TOEIC 580",
+        "date": "2023",
+        "desc": "Kỹ năng giao tiếp và đọc hiểu tài liệu tiếng Anh chuyên ngành."
+      }
+    },
+    "act_items": {
+      "debate": {
+        "title": "Vice President - Ban Giám khảo",
+        "company": "Câu lạc bộ Tranh biện Bách khoa",
+        "date": "2023 - 2024",
+        "desc": "Quản lý nhân sự, tổ chức các giải đấu tranh biện toàn quốc và nâng cao kỹ năng tư duy phản biện."
+      }
+    }
+  },
+  "skills": {
+    "title": "Kỹ Năng Công Nghệ",
+    "subtitle": "Các công nghệ và công cụ tôi sử dụng để xây dựng các giải pháp tối ưu.",
+    "categories": {
+      "ai": "AI & Machine Learning",
+      "languages": "Ngôn Ngữ & Công Cụ",
+      "backend": "Backend & Database",
+      "frontend": "Frontend Development"
+    }
+  },
+  "projects": {
+    "title": "Các Dự Án Tiêu Biểu",
+    "subtitle": "Tuyển tập những dự án nổi bật nhất của tôi từ lĩnh vực nhận diện hình ảnh chuyên sâu, Chatbot thông minh cho đến các ứng dụng Web toàn diện.",
+    "filter_all": "Tất cả Dự án",
+    "filter_vision": "Computer Vision",
+    "filter_genai": "Generative AI",
+    "filter_web": "Web Development",
+    "view_github": "Xem Toàn Bộ Trên GitHub",
+    "items": {
+      "reid": {
+        "title": "Hệ Thống Re-Identification Cầu Thủ Bóng Đá",
+        "desc": "Xây dựng pipeline Detection → Tracking → ReID để theo dõi và duy trì định danh cầu thủ. Sử dụng YOLOv8 phát hiện cầu thủ, BoT-SORT theo dõi đối tượng, mô hình ReID giảm hiện tượng đổi ID (ID Switch) khi bị che khuất."
+      },
+      "food": {
+        "title": "Hệ Thống Nhận Diện Nguyên Liệu Từ Hình Ảnh",
+        "desc": "Hệ thống nhận diện 65 loại nguyên liệu thực phẩm đạt mAP@50 > 80% (tốc độ suy luận < 100ms) phục vụ gợi ý công thức nấu ăn tự động, được tích hợp vào ứng dụng CookSmart."
+      },
+      "chatbot": {
+        "title": "Chatbot AI Hỗ Trợ Nấu Ăn Sử Dụng RAG",
+        "desc": "Chatbot AI hỗ trợ tra cứu công thức, tư vấn nguyên liệu và hướng dẫn chế biến. Tích hợp pipeline RAG (Intent Detection, Retrieval, Response Gen) giúp giảm hiện tượng hallucination."
+      },
+      "cooksmart": {
+        "title": "CookSmart – Website Gợi ý Công Thức Nấu Ăn",
+        "desc": "Ứng dụng web full-stack gợi ý công thức nấu ăn dựa trên nguyên liệu. Cung cấp API tài liệu hóa qua Swagger, áp dụng rate limiting, bảo mật JWT và realtime qua Socket.IO."
+      }
+    }
+  },
+  "contact": {
+    "title": "Liên Hệ Với Tôi",
+    "subtitle": "Bạn có một dự án thú vị hoặc cần một kỹ sư AI đam mê? Đừng ngần ngại để lại tin nhắn!",
+    "form_title": "Gửi Lời Nhắn",
+    "name": "Tên của bạn",
+    "email": "Email của bạn",
+    "subject": "Chủ đề",
+    "message": "Nội dung tin nhắn",
+    "send": "Gửi Lời Nhắn",
+    "sending": "Đang gửi...",
+    "info_title": "Thông Tin Liên Hệ",
+    "info_desc": "Luôn sẵn sàng đón nhận những cơ hội và thách thức mới trong lĩnh vực Công nghệ.",
+    "other_channels": "Các Kênh Khác"
+  },
+  "footer": {
+    "quote": "Xây dựng các giải pháp thông minh để giải quyết bài toán thực tế.",
+    "quick_links": "Liên Kết Nhanh",
+    "contact": "Liên Hệ",
+    "rights": "Bản quyền"
+  }
+}

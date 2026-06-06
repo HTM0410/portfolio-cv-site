@@ -1,22 +1,24 @@
 import { useState } from 'react'
 import { ExternalLink, Github, Activity } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const Projects = () => {
+  const { t } = useTranslation()
   const [filter, setFilter] = useState('all')
   
   const categories = [
-    { id: 'all', label: 'Tất cả Dự án' },
-    { id: 'vision', label: 'Computer Vision' },
-    { id: 'genai', label: 'Generative AI' },
-    { id: 'web', label: 'Web Development' },
+    { id: 'all', label: t('projects.filter_all') },
+    { id: 'vision', label: t('projects.filter_vision') },
+    { id: 'genai', label: t('projects.filter_genai') },
+    { id: 'web', label: t('projects.filter_web') },
   ]
   
   const projects = [
     {
       id: 1,
-      title: 'Hệ Thống Re-Identification Cầu Thủ Bóng Đá',
-      description: 'Xây dựng pipeline Detection → Tracking → ReID để theo dõi và duy trì định danh cầu thủ. Sử dụng YOLOv8 phát hiện cầu thủ, BoT-SORT theo dõi đối tượng, mô hình ReID giảm hiện tượng đổi ID (ID Switch) khi bị che khuất.',
+      title: t('projects.items.reid.title'),
+      description: t('projects.items.reid.desc'),
       image: '/images/football.png',
       category: 'vision',
       technologies: ['Python', 'YOLOv8', 'BoT-SORT', 'PyTorch', 'OpenCV'],
@@ -26,8 +28,8 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Hệ Thống Nhận Diện Nguyên Liệu Từ Hình Ảnh',
-      description: 'Hệ thống nhận diện 65 loại nguyên liệu thực phẩm đạt mAP@50 > 80% (tốc độ suy luận < 100ms) phục vụ gợi ý công thức nấu ăn tự động, được tích hợp vào ứng dụng CookSmart.',
+      title: t('projects.items.food.title'),
+      description: t('projects.items.food.desc'),
       image: '/images/food.png',
       category: 'vision',
       technologies: ['Python', 'YOLOv8', 'PyTorch', 'OpenCV'],
@@ -37,8 +39,8 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Chatbot AI Hỗ Trợ Nấu Ăn Sử Dụng RAG',
-      description: 'Chatbot AI hỗ trợ tra cứu công thức, tư vấn nguyên liệu và hướng dẫn chế biến. Tích hợp pipeline RAG (Intent Detection, Retrieval, Response Gen) giúp giảm hiện tượng hallucination.',
+      title: t('projects.items.chatbot.title'),
+      description: t('projects.items.chatbot.desc'),
       image: '/images/chatbot.png',
       category: 'genai',
       technologies: ['LangChain', 'RAG', 'Vector Database', 'LLM', 'FastAPI'],
@@ -48,8 +50,8 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'CookSmart – Website Gợi ý Công Thức Nấu Ăn',
-      description: 'Ứng dụng web full-stack gợi ý công thức nấu ăn dựa trên nguyên liệu. Cung cấp API tài liệu hóa qua Swagger, áp dụng rate limiting, bảo mật JWT và realtime qua Socket.IO.',
+      title: t('projects.items.cooksmart.title'),
+      description: t('projects.items.cooksmart.desc'),
       image: '/images/cooksmart.png',
       category: 'web',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.IO'],
@@ -75,8 +77,8 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <div>
-            <h2 className="section-title mb-4">Các Dự Án Tiêu Biểu</h2>
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl">Tuyển tập những dự án nổi bật nhất của tôi từ lĩnh vực nhận diện hình ảnh chuyên sâu, Chatbot thông minh cho đến các ứng dụng Web toàn diện.</p>
+            <h2 className="section-title mb-4">{t('projects.title')}</h2>
+            <p className="text-gray-600 dark:text-gray-400 max-w-2xl">{t('projects.subtitle')}</p>
           </div>
         </motion.div>
         

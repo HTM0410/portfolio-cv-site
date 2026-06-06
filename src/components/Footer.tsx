@@ -1,6 +1,8 @@
 import { Cpu, Heart, ArrowUp } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const { t } = useTranslation()
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -18,12 +20,12 @@ const Footer = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
-            <a href="#home" className="hover:text-primary transition-colors">Trang chủ</a>
-            <a href="#about" className="hover:text-primary transition-colors">Về tôi</a>
-            <a href="#skills" className="hover:text-primary transition-colors">Kỹ năng</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Dự án</a>
-            <a href="#experience" className="hover:text-primary transition-colors">Kinh nghiệm</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Liên hệ</a>
+            <a href="#home" className="hover:text-primary transition-colors">{t('navbar.home')}</a>
+            <a href="#about" className="hover:text-primary transition-colors">{t('navbar.about')}</a>
+            <a href="#skills" className="hover:text-primary transition-colors">{t('navbar.skills')}</a>
+            <a href="#projects" className="hover:text-primary transition-colors">{t('navbar.projects')}</a>
+            <a href="#experience" className="hover:text-primary transition-colors">{t('navbar.experience')}</a>
+            <a href="#contact" className="hover:text-primary transition-colors">{t('navbar.contact')}</a>
           </div>
           
           <button 

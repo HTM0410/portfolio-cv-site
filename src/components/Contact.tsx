@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, Facebook, Github, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,13 +46,13 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-gray-50 dark:bg-secondary-dark">
       <div className="container-custom">
-        <h2 className="section-title">Kết Nối Với Tôi</h2>
+        <h2 className="section-title">{t('contact.title')}</h2>
         
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6">Sẵn Sàng Hợp Tác</h3>
+            <h3 className="text-2xl font-bold mb-6">{t('contact.info_title')}</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              Tôi luôn cởi mở với các cơ hội làm việc trong lĩnh vực AI/ML, hợp tác nghiên cứu, hoặc các dự án phân tích dữ liệu đầy tham vọng. Dù bạn cần xây dựng một hệ thống MLOps, một ứng dụng tích hợp LLM hay giải pháp phân tích hình ảnh chuyên sâu — hãy liên hệ với tôi.
+              {t('contact.info_desc')}
             </p>
             
             <div className="space-y-6">
@@ -92,7 +94,7 @@ const Contact = () => {
             </div>
             
             <div className="mt-8">
-              <h4 className="font-semibold mb-4">Các Kênh Khác</h4>
+              <h4 className="font-semibold mb-4">{t('contact.other_channels')}</h4>
               <div className="flex gap-4">
                 <a 
                   href="https://www.facebook.com/hoang.truongminh.108" 
@@ -127,7 +129,7 @@ const Contact = () => {
           
           <div>
             <form onSubmit={handleSubmit} className="card">
-              <h3 className="text-2xl font-bold mb-6">Gửi Lời Nhắn</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('contact.form_title')}</h3>
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg">
@@ -144,7 +146,7 @@ const Contact = () => {
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block mb-2 font-medium">
-                    Họ Tên
+                    {t('contact.name')}
                   </label>
                                      <input
                      type="text"
@@ -160,7 +162,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="email" className="block mb-2 font-medium">
-                    Email của bạn
+                    {t('contact.email')}
                   </label>
                                      <input
                      type="email"
@@ -176,7 +178,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="subject" className="block mb-2 font-medium">
-                    Chủ đề
+                    {t('contact.subject')}
                   </label>
                                      <input
                      type="text"
@@ -192,7 +194,7 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="message" className="block mb-2 font-medium">
-                    Nội dung
+                    {t('contact.message')}
                   </label>
                                      <textarea
                      id="message"
@@ -217,11 +219,11 @@ const Contact = () => {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Đang gửi...
+                      {t('contact.sending')}
                     </>
                   ) : (
                     <>
-                      Gửi Lời Nhắn <Send size={18} className="ml-1" />
+                      {t('contact.send')} <Send size={18} className="ml-1" />
                     </>
                   )}
                 </button>

@@ -1,0 +1,157 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Truong Minh Hoang",
+    "role": "Student at HUST | AI Engineer Intern",
+    "description": "Passionate about researching and developing Artificial Intelligence systems, focusing on Computer Vision and Machine Learning.",
+    "cta": "View Projects",
+    "contact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "personal_info": "Personal Information",
+    "fullname": "Full Name",
+    "university": "University",
+    "major": "Major",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "download_cv": "Download CV",
+    "headline": "Developing intelligent Artificial Intelligence systems.",
+    "paragraph1": "As a senior student majoring in Mathematics and Computer Science at Hanoi University of Science and Technology, I aim to build my career in Artificial Intelligence with a strong focus on Computer Vision and Generative AI.",
+    "paragraph2": "I have experience in researching and deploying AI solutions such as Image Classification, Object Detection, Multi-Object Tracking, Re-Identification (ReID), and chatbots using Retrieval-Augmented Generation (RAG). Furthermore, I am capable of building Backend and Web Applications to integrate, deploy, and operate AI systems in practical environments.",
+    "paragraph3": "My goal is to become an AI Engineer, contributing to the development of AI products capable of solving real-world problems and bringing value to users.",
+    "skills": {
+      "cv": {
+        "title": "Computer Vision",
+        "desc": "Image classification, object detection, multi-object tracking, and Re-Identification using YOLOv8, ByteTrack, OpenCV."
+      },
+      "dl": {
+        "title": "Deep Learning",
+        "desc": "Building, training, and optimizing Deep Learning models with PyTorch, CNN, and Transfer Learning."
+      },
+      "backend": {
+        "title": "Backend & Deployment",
+        "desc": "Developing APIs, Backend, and integrating AI models using Node.js, Spring Boot, FastAPI."
+      },
+      "rag": {
+        "title": "RAG & LLM",
+        "desc": "Building AI chatbots using RAG, Vector Database, LangChain, and LLMs."
+      }
+    }
+  },
+  "experience": {
+    "title": "Education & Experience",
+    "subtitle": "My journey of learning and career development in the technology industry.",
+    "work": "Work Experience",
+    "education": "Education",
+    "certificate": "Certifications",
+    "activities": "Activities",
+    "work_items": {
+      "vnpt_ai": {
+        "title": "AI Engineer Intern",
+        "company": "VNPT AI Company",
+        "date": "03/2026 - Present",
+        "desc": "Researching and deploying Computer Vision models. Optimizing recognition algorithms and integrating them into real-world systems."
+      },
+      "vnpt_net": {
+        "title": "Software Intern",
+        "company": "VNPT Net Corporation",
+        "date": "06/2025 - 11/2025",
+        "desc": "Participated in internal software development, familiarizing with practical software development processes."
+      }
+    },
+    "edu_items": {
+      "hust": {
+        "title": "Hanoi University of Science and Technology",
+        "date": "2022 - Present",
+        "desc": "Major in Mathematics - Computer Science. Academic Encouragement Scholarship 2025.2."
+      }
+    },
+    "cert_items": {
+      "dl": {
+        "title": "DeepLearning.AI",
+        "date": "2024",
+        "desc": "Specialized certification in Deep Learning and Neural Networks."
+      },
+      "toeic": {
+        "title": "TOEIC 580",
+        "date": "2023",
+        "desc": "English communication and reading comprehension skills."
+      }
+    },
+    "act_items": {
+      "debate": {
+        "title": "Vice President - Adjudication Core",
+        "company": "Bach Khoa Debate Club",
+        "date": "2023 - 2024",
+        "desc": "Managed human resources, organized national debate tournaments, and enhanced critical thinking skills."
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies and tools I use to build optimal solutions.",
+    "categories": {
+      "ai": "AI & Machine Learning",
+      "languages": "Languages & Tools",
+      "backend": "Backend & Database",
+      "frontend": "Frontend Development"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A collection of my prominent projects ranging from deep computer vision to smart chatbots and full-stack web applications.",
+    "filter_all": "All Projects",
+    "filter_vision": "Computer Vision",
+    "filter_genai": "Generative AI",
+    "filter_web": "Web Development",
+    "view_github": "View All On GitHub",
+    "items": {
+      "reid": {
+        "title": "Football Player Re-Identification System",
+        "desc": "Built a Detection → Tracking → ReID pipeline to track and maintain player identities. Used YOLOv8 for detection, BoT-SORT for tracking, and ReID models to reduce ID Switch during occlusions."
+      },
+      "food": {
+        "title": "Ingredient Recognition System from Images",
+        "desc": "A system recognizing 65 food ingredients achieving mAP@50 > 80% (inference speed < 100ms) for automated recipe suggestions, integrated into the CookSmart application."
+      },
+      "chatbot": {
+        "title": "AI Cooking Assistant Chatbot using RAG",
+        "desc": "An AI chatbot assisting in recipe search, ingredient consultation, and cooking instructions. Integrated RAG pipeline (Intent Detection, Retrieval, Response Gen) to reduce hallucination."
+      },
+      "cooksmart": {
+        "title": "CookSmart – Recipe Suggestion Website",
+        "desc": "A full-stack web application suggesting recipes based on ingredients. Provided API documentation via Swagger, implemented rate limiting, JWT security, and realtime features via Socket.IO."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Have an interesting project or need a passionate AI Engineer? Feel free to leave a message!",
+    "form_title": "Send a Message",
+    "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "info_title": "Contact Information",
+    "info_desc": "Always open to new opportunities and challenges in the Technology sector.",
+    "other_channels": "Other Channels"
+  },
+  "footer": {
+    "quote": "Building smart solutions to solve real-world problems.",
+    "quick_links": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  }
+}

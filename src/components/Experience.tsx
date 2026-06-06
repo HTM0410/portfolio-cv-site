@@ -1,24 +1,26 @@
 import { Briefcase, GraduationCap, Calendar, Award } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const Experience = () => {
+  const { t } = useTranslation()
   const workExperience = [
     {
       id: 1,
-      title: 'AI Engineer Intern',
-      company: 'Công ty VNPT AI',
+      title: t('experience.work_items.vnpt_ai.title'),
+      company: t('experience.work_items.vnpt_ai.company'),
       location: 'Hà Nội',
-      period: '2026',
-      description: 'Nghiên cứu kiến thức nền tảng về Machine Learning, Deep Learning và Computer Vision. Xây dựng các mô hình nhận dạng hình ảnh và phân tích dữ liệu. Thực hiện các dự án CV bằng CNN, YOLOv8 và OpenCV. Tối ưu mô hình AI cho ứng dụng thực tế. Tích hợp mô hình ngôn ngữ lớn (LLM) và RAG.',
+      period: t('experience.work_items.vnpt_ai.date'),
+      description: t('experience.work_items.vnpt_ai.desc'),
       skills: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'YOLOv8', 'LLM', 'RAG'],
     },
     {
       id: 2,
-      title: 'Thực tập sinh (Software)',
-      company: 'Tổng Công ty Hạ tầng mạng VNPT Net',
+      title: t('experience.work_items.vnpt_net.title'),
+      company: t('experience.work_items.vnpt_net.company'),
       location: 'Hà Nội',
-      period: '2025',
-      description: 'Tham gia phát triển và tối ưu hệ thống quản lý hạ tầng mạng nội bộ. Làm việc với ngôn ngữ Java, Spring Boot và Oracle Database trong môi trường doanh nghiệp quy mô lớn. Thực hiện bảo trì, kiểm thử và nâng cao hiệu năng các chức năng hệ thống.',
+      period: t('experience.work_items.vnpt_net.date'),
+      description: t('experience.work_items.vnpt_net.desc'),
       skills: ['Java', 'Spring Boot', 'Oracle Database', 'Testing', 'System Optimization'],
     },
   ]
@@ -26,27 +28,27 @@ const Experience = () => {
   const education = [
     {
       id: 1,
-      degree: 'Sinh viên chuyên ngành Toán - Tin (Năm 4)',
+      degree: t('experience.edu_items.hust.title'),
       institution: 'Đại học Bách khoa Hà Nội',
       location: 'Hà Nội',
-      period: '2022 - Nay',
-      description: 'Điểm CPA: 2.82/4 | GPA: 3.85/4. Đạt Học bổng khuyến khích học tập kỳ 2025.2. Chú trọng vào các kiến thức nền tảng toán học ứng dụng cho Trí tuệ Nhân tạo và Khoa học Dữ liệu.',
+      period: t('experience.edu_items.hust.date'),
+      description: t('experience.edu_items.hust.desc'),
     },
   ]
   
   const certifications = [
     {
       id: 1,
-      name: 'Neural Networks & Deep Learning',
+      name: t('experience.cert_items.dl.title'),
       issuer: 'Coursera - DeepLearning.AI',
-      date: 'Hoàn thành',
+      date: t('experience.cert_items.dl.date'),
       link: '#',
     },
     {
       id: 2,
-      name: 'Chứng chỉ tiếng Anh TOEIC 580',
+      name: t('experience.cert_items.toeic.title'),
       issuer: 'IIG Vietnam',
-      date: 'Hoàn thành',
+      date: t('experience.cert_items.toeic.date'),
       link: '#',
     },
   ]
@@ -54,18 +56,8 @@ const Experience = () => {
   const activities = [
     {
       id: 1,
-      role: 'Phó chủ nhiệm',
-      organization: 'CLB Tranh biện HUST',
-    },
-    {
-      id: 2,
-      role: 'Trưởng Ban Tổ chức',
-      organization: 'HUST Debate Open Champion',
-    },
-    {
-      id: 3,
-      role: 'Phó Ban Tổ chức',
-      organization: 'Talkshow "Giao lưu"',
+      role: t('experience.act_items.debate.title'),
+      organization: t('experience.act_items.debate.company'),
     }
   ]
 
@@ -80,7 +72,7 @@ const Experience = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
         >
-          Kinh Nghiệm & Học Vấn
+          {t('experience.title')}
         </motion.h2>
         
         <div className="grid lg:grid-cols-3 gap-12">
@@ -94,7 +86,7 @@ const Experience = () => {
               <div className="p-2 bg-primary/10 rounded-lg text-primary">
                 <Briefcase size={24} />
               </div>
-              <h3 className="text-2xl font-bold">Kinh nghiệm Làm việc</h3>
+              <h3 className="text-2xl font-bold">{t('experience.work')}</h3>
             </motion.div>
             
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-primary/50 before:to-transparent">
@@ -154,7 +146,7 @@ const Experience = () => {
               <div className="p-2 bg-primary/10 rounded-lg text-primary">
                 <GraduationCap size={24} />
               </div>
-              <h3 className="text-2xl font-bold">Học vấn</h3>
+              <h3 className="text-2xl font-bold">{t('experience.education')}</h3>
             </motion.div>
             
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary/50 before:to-transparent">
@@ -201,7 +193,7 @@ const Experience = () => {
             <div className="card-glass p-8 sticky top-24">
               <h3 className="text-xl font-bold mb-8 flex items-center gap-2">
                 <span className="w-8 h-1 bg-primary rounded-full"></span>
-                Chứng chỉ
+                {t('experience.certificate')}
               </h3>
               
               <div className="space-y-6">
@@ -218,7 +210,7 @@ const Experience = () => {
               <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-800">
                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                   <span className="w-8 h-1 bg-primary rounded-full"></span>
-                  Hoạt động
+                  {t('experience.activities')}
                 </h3>
                 <div className="space-y-4">
                   {activities.map((act) => (

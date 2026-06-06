@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Moon, Sun, Menu, X, Cpu } from 'lucide-react'
+import { Moon, Sun, Menu, X, Cpu, Globe } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 interface NavbarProps {
   darkMode: boolean
@@ -7,8 +8,14 @@ interface NavbarProps {
 }
 
 const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language.startsWith('vi') ? 'en' : 'vi';
+    i18n.changeLanguage(newLang);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,12 +35,12 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
   }
 
   const navLinks = [
-    { name: 'Trang chủ', href: '#home' },
-    { name: 'Về tôi', href: '#about' },
-    { name: 'Kỹ năng', href: '#skills' },
-    { name: 'Dự án', href: '#projects' },
-    { name: 'Kinh nghiệm', href: '#experience' },
-    { name: 'Liên hệ', href: '#contact' },
+    { name: t('navbar.home'), href: '#home' },
+    { name: t('navbar.about'), href: '#about' },
+    { name: t('navbar.skills'), href: '#skills' },
+    { name: t('navbar.projects'), href: '#projects' },
+    { name: t('navbar.experience'), href: '#experience' },
+    { name: t('navbar.contact'), href: '#contact' },
   ]
 
   return (
@@ -68,6 +75,15 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
+          
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full font-bold bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
+            aria-label="Toggle language"
+          >
+            <Globe size={18} />
+            <span className="text-sm">{i18n.language?.startsWith('vi') ? 'EN' : 'VI'}</span>
+          </button>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -78,6 +94,14 @@ const Navbar = ({ darkMode, toggleDarkMode }: NavbarProps) => {
             aria-label="Toggle dark mode"
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
+          <button 
+            onClick={toggleLanguage}
+            className="p-2 rounded-full font-bold bg-primary/10 text-primary hover:bg-primary hover:text-white transition-colors"
+            aria-label="Toggle language"
+          >
+            <span className="text-sm">{i18n.language?.startsWith('vi') ? 'EN' : 'VI'}</span>
           </button>
           
           <button 

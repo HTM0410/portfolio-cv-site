@@ -1,8 +1,10 @@
 import { Download, Mail, Phone, MapPin, Calendar, User, BookOpen, Layers, Scan, Code, Server, CheckCircle2 } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const { t } = useTranslation()
   const ref = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -36,7 +38,7 @@ const About = () => {
           viewport={{ once: true, margin: "-100px" }}
           style={{ y: yTitle }}
         >
-          Về Bản Thân
+          {t('about.title')}
         </motion.h2>
         
         <div className="grid lg:grid-cols-3 gap-12 items-start">
@@ -57,17 +59,17 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Thông Tin Cá Nhân
+                {t('about.personal_info')}
               </motion.h3>
               
               <div className="space-y-5">
                 {[
-                  { icon: User, label: "Họ Tên", value: "Trương Minh Hoàng" },
-                  { icon: BookOpen, label: "Đại học", value: "Đại học Bách khoa Hà Nội" },
-                  { icon: Layers, label: "Ngành học", value: "Toán - Tin (Năm 4)" },
-                  { icon: MapPin, label: "Địa Chỉ", value: "Đống Đa, Hà Nội" },
-                  { icon: Phone, label: "Điện Thoại", value: "0986 122 511" },
-                  { icon: Mail, label: "Email", value: "hoangtruongminh22@gmail.com" }
+                  { icon: User, label: t('about.fullname'), value: "Trương Minh Hoàng" },
+                  { icon: BookOpen, label: t('about.university'), value: "Đại học Bách khoa Hà Nội" },
+                  { icon: Layers, label: t('about.major'), value: "Toán - Tin (Năm 4)" },
+                  { icon: MapPin, label: t('about.address'), value: "Đống Đa, Hà Nội" },
+                  { icon: Phone, label: t('about.phone'), value: "0986 122 511" },
+                  { icon: Mail, label: t('about.email'), value: "hoangtruongminh22@gmail.com" }
                 ].map((item, index) => (
                   <motion.div 
                     key={index}
@@ -96,14 +98,14 @@ const About = () => {
                 viewport={{ once: true }}
               >
                 <motion.a 
-                  href="/CV_Truong_Minh_Hoang_en.pdf" 
+                  href="/CV_TRƯƠNG MINH HOÀNG.pdf" 
                   className="btn btn-primary w-full flex items-center justify-center gap-2" 
-                  download="CV_Truong_Minh_Hoang.pdf"
+                  download="CV_TRƯƠNG MINH HOÀNG.pdf"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <Download size={20} />
-                  Tải Xuống CV
+                  {t('about.download_cv')}
                 </motion.a>
               </motion.div>
             </div>
@@ -125,7 +127,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Phát triển các hệ thống <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-400">Trí tuệ Nhân tạo</span> thông minh.
+              {t('about.headline')}
             </motion.h3>
             
             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -135,7 +137,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
               >
-                Là sinh viên năm cuối chuyên ngành Toán – Tin tại Đại học Bách khoa Hà Nội, tôi định hướng phát triển sự nghiệp trong lĩnh vực Trí tuệ nhân tạo với trọng tâm là Computer Vision và Generative AI.
+                {t('about.paragraph1')}
               </motion.p>
               
               <motion.p 
@@ -144,7 +146,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                Tôi có kinh nghiệm nghiên cứu và triển khai các bài toán AI như phân loại ảnh (Image Classification), phát hiện đối tượng (Object Detection), theo dõi đa đối tượng (Multi-Object Tracking), Re-Identification (ReID) và chatbot sử dụng Retrieval-Augmented Generation (RAG). Đồng thời, tôi có khả năng xây dựng Backend và Web Application để tích hợp, triển khai và vận hành các hệ thống AI trong môi trường thực tế.
+                {t('about.paragraph2')}
               </motion.p>
               
               <motion.p 
@@ -153,7 +155,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 viewport={{ once: true }}
               >
-                Mục tiêu của tôi là trở thành AI Engineer, tham gia phát triển các sản phẩm AI có khả năng giải quyết những bài toán thực tiễn và tạo ra giá trị cho người dùng.
+                {t('about.paragraph3')}
               </motion.p>
             </div>
             
@@ -167,23 +169,23 @@ const About = () => {
               {[
                 { 
                   icon: Scan, 
-                  title: "Computer Vision", 
-                  desc: "Phân loại ảnh, phát hiện đối tượng, theo dõi đa đối tượng và Re-Identification bằng YOLOv8, ByteTrack, OpenCV." 
+                  title: t('about.skills.cv.title'), 
+                  desc: t('about.skills.cv.desc') 
                 },
                 { 
                   icon: CheckCircle2, 
-                  title: "Deep Learning", 
-                  desc: "Xây dựng, huấn luyện và tối ưu mô hình Deep Learning với PyTorch, CNN và Transfer Learning." 
+                  title: t('about.skills.dl.title'), 
+                  desc: t('about.skills.dl.desc') 
                 },
                 { 
                   icon: Server, 
-                  title: "Backend & Deployment", 
-                  desc: "Phát triển API, Backend và tích hợp mô hình AI bằng Node.js, Spring Boot, FastAPI." 
+                  title: t('about.skills.backend.title'), 
+                  desc: t('about.skills.backend.desc') 
                 },
                 { 
                   icon: Layers, 
-                  title: "RAG & LLM", 
-                  desc: "Xây dựng chatbot AI sử dụng RAG, Vector Database, LangChain và LLM." 
+                  title: t('about.skills.rag.title'), 
+                  desc: t('about.skills.rag.desc') 
                 }
               ].map((skill, index) => (
                 <motion.div 
