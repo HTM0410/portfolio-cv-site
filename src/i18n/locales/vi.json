@@ -180,7 +180,8 @@
     "placeholder_subject": "Hợp tác phát triển AI",
     "placeholder_message": "Xin chào Hoàng, tôi đang tìm kiếm một kỹ sư AI để...",
     "success_msg": "Tin nhắn của bạn đã được gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.",
-    "error_msg": "Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại."
+    "error_msg": "Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại.",
+    "placeholder_email": "Ví dụ: email@example.com"
   },
   "footer": {
     "quote": "Xây dựng các giải pháp thông minh để giải quyết bài toán thực tế.",

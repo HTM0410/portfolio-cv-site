@@ -180,7 +180,8 @@
     "placeholder_subject": "AI Development Collaboration",
     "placeholder_message": "Hello Hoang, I am looking for an AI Engineer to...",
     "success_msg": "Your message has been sent successfully! I will get back to you as soon as possible.",
-    "error_msg": "An error occurred while sending the message. Please try again."
+    "error_msg": "An error occurred while sending the message. Please try again.",
+    "placeholder_email": "e.g., email@example.com"
   },
   "footer": {
     "quote": "Building smart solutions to solve real-world problems.",
