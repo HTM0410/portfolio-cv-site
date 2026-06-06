@@ -28,8 +28,13 @@ exports.handler = async function(event, context) {
       locationData = { city: 'Localhost', country_name: 'Local Dev', org: 'N/A' };
     }
 
-    const botToken = process.env.TELEGRAM_BOT_TOKEN || "8749694262:AAGSRIXKbeuWO1f6VCRuUcy9Scdqr3kdobA";
-    const chatId = process.env.TELEGRAM_CHAT_ID || "5632266884";
+    const botToken = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
+    
+    if (!botToken || !chatId) {
+      console.error("Missing Telegram configuration");
+      return { statusCode: 500, body: JSON.stringify({ error: 'Config Error' }) };
+    }
     const userAgent = event.headers['user-agent'] || 'Unknown Device';
     
     const dateOpts = { timeZone: 'Asia/Ho_Chi_Minh', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
