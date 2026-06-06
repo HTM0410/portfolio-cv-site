@@ -65,9 +65,9 @@ const About = () => {
               <div className="space-y-5">
                 {[
                   { icon: User, label: t('about.fullname'), value: "Trương Minh Hoàng" },
-                  { icon: BookOpen, label: t('about.university'), value: "Đại học Bách khoa Hà Nội" },
-                  { icon: Layers, label: t('about.major'), value: "Toán - Tin (Năm 4)" },
-                  { icon: MapPin, label: t('about.address'), value: "Đống Đa, Hà Nội" },
+                  { icon: BookOpen, label: t('about.university'), value: t('about.val_university') },
+                  { icon: Layers, label: t('about.major'), value: t('about.val_major') },
+                  { icon: MapPin, label: t('about.address'), value: t('about.val_address') },
                   { icon: Phone, label: t('about.phone'), value: "0986 122 511" },
                   { icon: Mail, label: t('about.email'), value: "hoangtruongminh22@gmail.com" }
                 ].map((item, index) => (

@@ -48,7 +48,10 @@
         "title": "RAG & LLM",
         "desc": "Xây dựng chatbot AI sử dụng RAG, Vector Database, LangChain và LLM."
       }
-    }
+    },
+    "val_university": "Đại học Bách khoa Hà Nội",
+    "val_major": "Toán - Tin (Năm 4)",
+    "val_address": "Đống Đa, Hà Nội"
   },
   "experience": {
     "title": "Học Vấn & Kinh Nghiệm",
@@ -167,7 +170,11 @@
     "sending": "Đang gửi...",
     "info_title": "Thông Tin Liên Hệ",
     "info_desc": "Luôn sẵn sàng đón nhận những cơ hội và thách thức mới trong lĩnh vực Công nghệ.",
-    "other_channels": "Các Kênh Khác"
+    "other_channels": "Các Kênh Khác",
+    "email_title": "Email",
+    "phone_title": "Điện thoại",
+    "address_title": "Địa chỉ",
+    "address_info": "Đống Đa, Hà Nội, Việt Nam"
   },
   "footer": {
     "quote": "Xây dựng các giải pháp thông minh để giải quyết bài toán thực tế.",

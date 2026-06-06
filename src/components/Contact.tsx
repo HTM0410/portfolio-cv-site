@@ -61,7 +61,7 @@ const Contact = () => {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Email</h4>
+                  <h4 className="font-semibold">{t('contact.email_title')}</h4>
                   <a href="mailto:hoangtruongminh22@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                     hoangtruongminh22@gmail.com
                   </a>
@@ -73,7 +73,7 @@ const Contact = () => {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Điện thoại</h4>
+                  <h4 className="font-semibold">{t('contact.phone_title')}</h4>
                   <a href="tel:+84986122511" className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">
                     +84 986 122 511
                   </a>
@@ -85,9 +85,9 @@ const Contact = () => {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Địa chỉ</h4>
+                  <h4 className="font-semibold">{t('contact.address_title')}</h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Đống Đa, Hà Nội, Việt Nam
+                    {t('contact.address_info')}
                   </p>
                 </div>
               </div>

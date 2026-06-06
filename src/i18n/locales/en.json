@@ -48,7 +48,10 @@
         "title": "RAG & LLM",
         "desc": "Building AI chatbots using RAG, Vector Database, LangChain, and LLMs."
       }
-    }
+    },
+    "val_university": "Hanoi University of Science and Technology",
+    "val_major": "Mathematics and Informatics (Senior)",
+    "val_address": "Dong Da, Hanoi"
   },
   "experience": {
     "title": "Education & Experience",
@@ -167,7 +170,11 @@
     "sending": "Sending...",
     "info_title": "Contact Information",
     "info_desc": "Always open to new opportunities and challenges in the Technology sector.",
-    "other_channels": "Other Channels"
+    "other_channels": "Other Channels",
+    "email_title": "Email",
+    "phone_title": "Phone",
+    "address_title": "Address",
+    "address_info": "Dong Da, Hanoi, Vietnam"
   },
   "footer": {
     "quote": "Building smart solutions to solve real-world problems.",
