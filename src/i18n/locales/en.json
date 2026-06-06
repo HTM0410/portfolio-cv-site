@@ -130,7 +130,8 @@
         "title": "Web Development",
         "desc": "Full-stack development with React, Node.js, Spring Boot"
       }
-    }
+    },
+    "badge": "Tech Arsenal"
   },
   "projects": {
     "title": "Featured Projects",

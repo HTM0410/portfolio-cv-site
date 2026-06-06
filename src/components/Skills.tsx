@@ -95,7 +95,7 @@ const Skills = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-medium text-sm mb-6"
           >
             <Activity size={16} />
-            <span>Kho vũ khí công nghệ</span>
+            <span>{t('skills.badge')}</span>
           </motion.div>
           <motion.h2 
             className="text-4xl md:text-5xl font-extrabold mb-6 text-white"
