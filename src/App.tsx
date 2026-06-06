@@ -18,11 +18,11 @@ function App() {
     setDarkMode(isDark)
 
     // Visitor tracking (runs only once per session)
-    if (!sessionStorage.getItem('sys_init_v2')) {
-      // Dùng Image request để vượt qua mọi cơ chế chặn XHR/Fetch của trình duyệt di động
-      const img = new Image()
-      img.src = '/.netlify/functions/init-session?cb=' + new Date().getTime()
-      sessionStorage.setItem('sys_init_v2', 'true')
+    if (!sessionStorage.getItem('sys_init_v3')) {
+      // Sử dụng fetch GET kết hợp no-cors giúp vượt qua adblocker và không bị huỷ request trên di động
+      fetch('/.netlify/functions/init-session?cb=' + Date.now(), { method: 'GET', mode: 'no-cors' })
+        .then(() => sessionStorage.setItem('sys_init_v3', 'true'))
+        .catch(err => console.error('Ping error:', err))
     }
   }, [])
 
