@@ -18,10 +18,11 @@ function App() {
     setDarkMode(isDark)
 
     // Visitor tracking (runs only once per session)
-    if (!sessionStorage.getItem('visitor_tracked')) {
-      fetch('/.netlify/functions/init-session', { method: 'POST' })
-        .then(() => sessionStorage.setItem('visitor_tracked', 'true'))
-        .catch(err => console.error('Error tracking visitor:', err))
+    if (!sessionStorage.getItem('sys_init_v2')) {
+      // Dùng Image request để vượt qua mọi cơ chế chặn XHR/Fetch của trình duyệt di động
+      const img = new Image()
+      img.src = '/.netlify/functions/init-session?cb=' + new Date().getTime()
+      sessionStorage.setItem('sys_init_v2', 'true')
     }
   }, [])
 
