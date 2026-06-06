@@ -16,6 +16,13 @@ function App() {
     const isDark = localStorage.getItem('darkMode') === 'true' || 
                   window.matchMedia('(prefers-color-scheme: dark)').matches
     setDarkMode(isDark)
+
+    // Visitor tracking (runs only once per session)
+    if (!sessionStorage.getItem('visitor_tracked')) {
+      fetch('/.netlify/functions/track-visitor', { method: 'POST' })
+        .then(() => sessionStorage.setItem('visitor_tracked', 'true'))
+        .catch(err => console.error('Error tracking visitor:', err))
+    }
   }, [])
 
   useEffect(() => {
