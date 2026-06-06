@@ -175,7 +175,12 @@
     "email_title": "Email",
     "phone_title": "Phone",
     "address_title": "Address",
-    "address_info": "Dong Da, Hanoi, Vietnam"
+    "address_info": "Dong Da, Hanoi, Vietnam",
+    "placeholder_name": "e.g., John Doe",
+    "placeholder_subject": "AI Development Collaboration",
+    "placeholder_message": "Hello Hoang, I am looking for an AI Engineer to...",
+    "success_msg": "Your message has been sent successfully! I will get back to you as soon as possible.",
+    "error_msg": "An error occurred while sending the message. Please try again."
   },
   "footer": {
     "quote": "Building smart solutions to solve real-world problems.",

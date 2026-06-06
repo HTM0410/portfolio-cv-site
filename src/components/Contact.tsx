@@ -133,13 +133,13 @@ const Contact = () => {
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-lg">
-                  Tin nhắn của bạn đã được gửi thành công! Tôi sẽ phản hồi sớm nhất có thể.
+                  {t('contact.success_msg')}
                 </div>
               )}
               
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 rounded-lg">
-                  Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại.
+                  {t('contact.error_msg')}
                 </div>
               )}
               
@@ -156,7 +156,7 @@ const Contact = () => {
                      onChange={handleChange}
                      required
                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                     placeholder="Ví dụ: Nguyễn Văn A"
+                     placeholder={t('contact.placeholder_name')}
                    />
                 </div>
                 
@@ -188,7 +188,7 @@ const Contact = () => {
                      onChange={handleChange}
                      required
                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white"
-                     placeholder="Hợp tác phát triển AI"
+                     placeholder={t('contact.placeholder_subject')}
                    />
                 </div>
                 
@@ -204,7 +204,7 @@ const Contact = () => {
                      required
                      rows={5}
                      className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-secondary focus:outline-none focus:ring-2 focus:ring-primary dark:bg-secondary-light dark:text-white resize-none"
-                     placeholder="Xin chào Hoàng, tôi đang tìm kiếm một kỹ sư AI để..."
+                     placeholder={t('contact.placeholder_message')}
                    ></textarea>
                 </div>
                 
